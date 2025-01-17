@@ -1,15 +1,21 @@
----
+--
 title: Welcome
 tags:
-- EGR314
-- Projects
+- tag1
+- tag2
 ---
 
-## About
+## Hello, my name is David Diaz
 
-This website showcases my work in **EGR314 - Embedded Systems Design**.
+* List item 1
+* List item 2
 
-## Projects
+name | description
+-----|------------
+david  | fun
+david  | silly
 
-- **ESP32 Setup**
-- **Git and Website**
+### Here is a sub-heading
+
+1. Step 1
+2. Step 2
