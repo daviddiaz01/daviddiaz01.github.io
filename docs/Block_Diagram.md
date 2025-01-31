@@ -1,3 +1,3 @@
 ## Block Diagram
 
-![Block Diagram](../images/block.png)
+![Block Diagram](images/blocknew.png)
