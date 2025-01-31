@@ -1,2 +1,2 @@
 # Block Diagram Folder
-docs/BlockDiagram/David Diaz Block Diagram Team 305.drawio.png
+[View Block Diagram](docs/BlockDiagram/David_Diaz_Block_Diagram_Team305.pdf)
