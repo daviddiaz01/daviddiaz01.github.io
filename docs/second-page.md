@@ -1,5 +1,3 @@
----
-title: Second Page
----
+## Block Diagram
 
-Things to discuss
+![Block Diagram](../images/block.png)
