@@ -32,3 +32,8 @@ Below is an outline of the steps I follow in my technical projects:
 ---
 
 This version maintains a professional tone while making your content clearer and more structured. 🚀
+
+### Block Diagram 
+
+![Block Diagram](../images/block.png)
+
