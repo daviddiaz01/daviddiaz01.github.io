@@ -1,3 +1,4 @@
 ## Block Diagram
 
-![Block Diagram](images/block.png)
+<img src="./images/block.png" alt="Block Diagram">
+
