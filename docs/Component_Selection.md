@@ -169,7 +169,13 @@ Each of the above components was selected based on key factors such as electrica
 | Motor PWM                           | 2            | 1          | * |
 | USB Programmer                      | 1            | 1          | USB_D+, USB_D- |
 
+---
 
+## ESP32-S3-WROOM-1-N4 Pinout Diagram  
+
+![Pinout Diagram](images/pinout.png)  
+
+---
 
 ## Conclusion
 This component selection ensures the sensor subsystem works reliably with the ESP32-S3, enabling precise color detection and stable power management. Each component was chosen for optimal performance, seamless integration, and efficient operation within the line-following robot.
