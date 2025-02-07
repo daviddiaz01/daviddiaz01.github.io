@@ -452,8 +452,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-capacitors-cin-cout-css" class="md-nav__link">
-    7. Capacitors (CIN, COUT, CSS)
+  <a href="#7-capacitors-cin-cout-css-for-regulator" class="md-nav__link">
+    7. Capacitors (CIN, COUT, CSS) for regulator
   </a>
   
 </li>
@@ -467,19 +467,6 @@
   <a href="#conclusion" class="md-nav__link">
     Conclusion
   </a>
-  
-    <nav class="md-nav" aria-label="Conclusion">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    Next Steps
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -582,8 +569,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-capacitors-cin-cout-css" class="md-nav__link">
-    7. Capacitors (CIN, COUT, CSS)
+  <a href="#7-capacitors-cin-cout-css-for-regulator" class="md-nav__link">
+    7. Capacitors (CIN, COUT, CSS) for regulator
   </a>
   
 </li>
@@ -597,19 +584,6 @@
   <a href="#conclusion" class="md-nav__link">
     Conclusion
   </a>
-  
-    <nav class="md-nav" aria-label="Conclusion">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    Next Steps
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -662,7 +636,7 @@
 <tr>
 <td><strong>Voltage Regulator</strong></td>
 <td>ADPL44002-3.3</td>
-<td>Steps down 12V to <strong>3.3V</strong> to power ESP32 and sensor</td>
+<td>Steps down 12V to 3.3V to power ESP32 and sensor</td>
 </tr>
 <tr>
 <td><strong>Power Supply</strong></td>
@@ -677,32 +651,32 @@
 <tr>
 <td><strong>Push Button (RESET)</strong></td>
 <td>Omron B3U Series (SMT)</td>
-<td>Connects <strong>EN (RESET) to GND</strong> to restart ESP32</td>
+<td>Connects EN (RESET) to GND to restart ESP32</td>
 </tr>
 <tr>
 <td><strong>Push Button (BOOT Mode)</strong></td>
 <td>Omron B3U Series (SMT)</td>
-<td>Connects <strong>GPIO0 to GND</strong> to enter boot mode</td>
+<td>Connects GPIO0 to GND to enter boot mode</td>
 </tr>
 <tr>
 <td><strong>Switch (Enable ON/OFF)</strong></td>
 <td>Omron B3U Series (SMT)</td>
-<td>Controls the <strong>EN pin</strong> to turn the regulator ON/OFF</td>
+<td>Controls the EN pin to turn the regulator ON/OFF</td>
 </tr>
 <tr>
 <td><strong>Input Capacitor (CIN)</strong></td>
 <td>2.2µF (Ceramic, SMD 0805)</td>
-<td>Filters noise and stabilizes <strong>VIN</strong></td>
+<td>Filters noise and stabilizes VIN for regulator</td>
 </tr>
 <tr>
 <td><strong>Output Capacitor (COUT)</strong></td>
 <td>2.2µF (Ceramic, SMD 0805)</td>
-<td>Stabilizes <strong>VOUT (3.3V output)</strong></td>
+<td>Stabilizes VOUT (3.3V output)for regulator</td>
 </tr>
 <tr>
 <td><strong>Soft-Start Capacitor (CSS)</strong></td>
 <td>1nF (Ceramic, SMD 0805)</td>
-<td>Controls <strong>soft-start delay</strong> to prevent inrush current</td>
+<td>Controls soft-start delay to prevent inrush current for regulator</td>
 </tr>
 </tbody>
 </table>
@@ -728,7 +702,7 @@
 </ul>
 <h3 id="4-power-supply-12v-ac-dc-adapter"><strong>4. Power Supply - 12V AC-DC Adapter</strong></h3>
 <ul>
-<li>Provides a stable <strong>12V power source</strong>.</li>
+<li>Provides a stable 12V power source.</li>
 <li>Compatible with voltage regulator and ESP32 power requirements.</li>
 </ul>
 <h3 id="5-usb-to-serial-adapter-hiletgo-cp2102"><strong>5. USB-to-Serial Adapter - HiLetgo CP2102</strong></h3>
@@ -738,26 +712,19 @@
 </ul>
 <h3 id="6-surface-mount-push-buttons-omron-b3u-series"><strong>6. Surface-Mount Push Buttons - Omron B3U Series</strong></h3>
 <ul>
-<li>Used for <strong>RESET</strong> and <strong>BOOT mode selection</strong>.</li>
+<li>Used for RESET and BOOT mode selection.</li>
 <li>Compact and easy to integrate into the PCB.</li>
 <li>Provides long operational life.</li>
 </ul>
-<h3 id="7-capacitors-cin-cout-css"><strong>7. Capacitors (CIN, COUT, CSS)</strong></h3>
+<h3 id="7-capacitors-cin-cout-css-for-regulator"><strong>7. Capacitors (CIN, COUT, CSS) for regulator</strong></h3>
 <ul>
-<li><strong>CIN (2.2µF, Ceramic, SMD 0805)</strong> - Stabilizes input voltage.</li>
-<li><strong>COUT (2.2µF, Ceramic, SMD 0805)</strong> - Ensures stable 3.3V output.</li>
-<li><strong>CSS (1nF, Ceramic, SMD 0805)</strong> - Soft-start functionality.</li>
+<li>CIN (2.2µF, Ceramic, SMD 0805) - Stabilizes input voltage.</li>
+<li>COUT (2.2µF, Ceramic, SMD 0805) - Ensures stable 3.3V output.</li>
+<li>CSS (1nF, Ceramic, SMD 0805) - Soft-start functionality.</li>
 </ul>
 <hr />
 <h2 id="conclusion">Conclusion</h2>
-<p>This component selection ensures that the <strong>sensor subsystem</strong> operates efficiently with the ESP32-S3, providing <strong>accurate color detection</strong> and stable power regulation.</p>
-<hr />
-<h3 id="next-steps"><strong>Next Steps</strong></h3>
-<ol>
-<li>Research and compare alternative components (Step 2).  </li>
-<li>Verify PCB footprints and finalize the circuit design.  </li>
-<li>Begin PCB layout in <strong>KiCad</strong> and prepare for manufacturing.</li>
-</ol>
+<p>This component selection ensures that the sensor subsystem operates efficiently with the ESP32-S3, providing accurate color detection and stable power regulation.</p>
 <hr />
 
 
