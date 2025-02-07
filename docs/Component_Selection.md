@@ -78,6 +78,9 @@ Each of the above components was selected based on key factors such as electrica
 - Compact and easy to integrate into the PCB.
 - Provides long operational life.
 
+- **Product Link:** [Omron B3U-1000P - Mouser](https://www.mouser.com/ProductDetail/Omron-Electronics/B3U-1000P?qs=AO7BQMcsEu4ip80xyf2FwA%3D%3D&srsltid=AfmBOorCcS8cTuZ0dYUN8hCGonExu1E_8fJmpz2IEKzbWOCu_5lntN5z)
+- **Datasheet:** [Omron B3U-1000P Datasheet](https://www.mouser.com/datasheet/2/307/en_b3u-3476507.pdf)
+
 ### **7. Capacitors (CIN, COUT, CSS) for regulator**
 - CIN (2.2µF, Ceramic, SMD 0805) - Stabilizes input voltage.
 - COUT (2.2µF, Ceramic, SMD 0805) - Ensures stable 3.3V output.
