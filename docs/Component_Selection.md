@@ -136,7 +136,7 @@ Each of the above components was selected based on key factors such as electrica
 
 ---
 
-# **ESP32-S3-WROOM-1-N4 Component Specifications**   
+## **ESP32-S3-WROOM-1-N4 Component Specifications**   
 ![ESP32](images/ESP32.png)
 
 | ESP Info                            | Answer                                          |
