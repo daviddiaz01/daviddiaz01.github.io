@@ -136,6 +136,41 @@ Each of the above components was selected based on key factors such as electrica
 
 ---
 
+# ESP32-S3-WROOM-1-N4 Component Specifications  
+![ESP32](images/ESP32.png)
+
+| ESP Info                            | Answer                                          |
+|-------------------------------------|------------------------------------------------|
+| Model                               | ESP32-S3-WROOM-1-N4                           |
+| Product Page URL                    | [Espressif Product Page](https://www.espressif.com/en/products/modules/esp32-s3-wroom-1) |
+| ESP32-S3-WROOM-1-N4 Datasheet URL   | [Datasheet](https://www.espressif.com/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) |
+| ESP32 S3 Datasheet URL              | [ESP32-S3 Datasheet](https://espressif.com/documentation/esp32-s3_datasheet_en.pdf) |
+| ESP32 S3 Technical Reference Manual URL | [Technical Manual](https://espressif.com/documentation/esp32-s3_technical_reference_manual_en.pdf) |
+| Vendor link                         | [DigiKey](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/13632600) |
+| Code Examples                       | [GitHub Libraries](https://github.com/espressif/esp-idf) |
+| External Resources URL(s)           | [Google Search](https://www.google.com/search?q=ESP32-S3-WROOM-1-N4+tutorial) |
+| Unit cost                           | $3.80 (DigiKey) |
+| Absolute Maximum Current for entire IC | 500 mA |
+| Supply Voltage Range                | Min: 3.0V / Nominal: 3.3V / Max: 3.6V |
+| Maximum GPIO current (per pin)      | 40 mA |
+| Supports External Interrupts?       | Yes |
+| Required Programming Hardware, Cost, URL | CP2102 USB to UART ($6)  |
+
+## **Peripheral Availability**  
+
+| **Module**                          | **# Available** | **Needed** | **Associated Pins (or * for any)** |
+|--------------------------------------|----------------|------------|------------------------------------|
+| UART                                | 3            | 1          | TXD0, RXD0 |
+| external SPI*                       | 2            | 1          | GPIO11, GPIO12, GPIO13, GPIO14 |
+| I2C                                 | 2            | 1          | GPIO8 (SDA), GPIO9 (SCL) |
+| GPIO                                | 36           | 4          | * |
+| ADC                                 | 20           | 2          | GPIO1, GPIO2 |
+| LED PWM                             | 8            | 2          | * |
+| Motor PWM                           | 2            | 1          | * |
+| USB Programmer                      | 1            | 1          | USB_D+, USB_D- |
+
+
+
 ## Conclusion
 This component selection ensures the sensor subsystem works reliably with the ESP32-S3, enabling precise color detection and stable power management. Each component was chosen for optimal performance, seamless integration, and efficient operation within the line-following robot.
 
