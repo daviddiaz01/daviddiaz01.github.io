@@ -89,6 +89,8 @@ Each of the above components was selected based on key factors such as electrica
 - **Product Link:** [Tri-Mag L6R06H-120 - DigiKey](https://www.digikey.lv/en/products/detail/tri-mag-llc/L6R06H-120/7682617)
 - **Datasheet:** [Tri-Mag L6R06H-120 Datasheet](https://www.tri-mag.com/wp-content/uploads/2021/05/L6R06H_Series_2021-02a.pdf)
 
+![Adapter](images/Adapter.png)
+
 ---
 
 ### **5. USB-to-Serial Adapter - HiLetgo CP2102**
@@ -97,7 +99,7 @@ Each of the above components was selected based on key factors such as electrica
 
 - **Product Link:** [HiLetgo CP2102 - Amazon](https://www.amazon.com/HiLetgo-CP2102-Converter-Adapter-Downloader/dp/B00LODGRV8/ref=asc_df_B00LODGRV8?mcid=f769787d268d36d0b7198a3ca2ef4ffc&hvocijid=1662806867067399458-B00LODGRV8-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=730352155585&hvpos=&hvnetw=g&hvrand=1662806867067399458&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9030136&hvtargid=pla-2281435178538&psc=1)
 
-![Adapter](images/Adapter.png)
+
 
 ---
 
