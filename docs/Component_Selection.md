@@ -87,7 +87,14 @@ Each of the above components was selected based on key factors such as electrica
 ### **7. Capacitors (CIN, COUT, CSS) for regulator**
 - CIN (2.2µF, Ceramic, SMD 0805) - Stabilizes input voltage.
 - COUT (2.2µF, Ceramic, SMD 0805) - Ensures stable 3.3V output.
+
+- **Product Link:** [KEMET C0805C225K8PACTU - DigiKey](https://www.digikey.com/en/products/detail/kemet/C0805C225K8PACTU/551630)
+- **Datasheet:** [KEMET C0805C225K8PACTU Datasheet](https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf)
+  
 - CSS (1nF, Ceramic, SMD 0805) - Soft-start functionality.
+
+- **Product Link:** [KEMET C0805C102J5GAC7800 - DigiKey](https://www.digikey.com/en/products/detail/kemet/C0805C102J5GAC7800/411135)
+- **Datasheet:** [KEMET C0805C102J5GAC7800 Datasheet](https://content.kemet.com/datasheets/KEM_C1003_C0G_SMD.pdf)
 
 ---
 
