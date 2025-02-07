@@ -137,7 +137,7 @@ Each of the above components was selected based on key factors such as electrica
 ---
 
 ## Conclusion
-This component selection ensures that the sensor subsystem operates efficiently with the ESP32-S3, providing accurate color detection and stable power regulation.
+This component selection ensures the sensor subsystem works reliably with the ESP32-S3, enabling precise color detection and stable power management. Each component was chosen for optimal performance, seamless integration, and efficient operation within the line-following robot.
 
 ---
 
