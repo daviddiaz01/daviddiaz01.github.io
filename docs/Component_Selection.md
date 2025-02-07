@@ -67,6 +67,9 @@ Each of the above components was selected based on key factors such as electrica
 - Provides a stable 12V power source.
 - Compatible with voltage regulator and ESP32 power requirements.
 
+- **Product Link:** [Tri-Mag L6R06H-120 - DigiKey](https://www.digikey.lv/en/products/detail/tri-mag-llc/L6R06H-120/7682617)
+- **Datasheet:** [Tri-Mag L6R06H-120 Datasheet](https://www.tri-mag.com/wp-content/uploads/2021/05/L6R06H_Series_2021-02a.pdf)
+
 ### **5. USB-to-Serial Adapter - HiLetgo CP2102**
 - Required for flashing firmware to the ESP32-S3.
 - Provides stable USB-to-UART communication.
