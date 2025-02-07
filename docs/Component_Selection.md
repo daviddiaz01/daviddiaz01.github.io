@@ -71,6 +71,8 @@ Each of the above components was selected based on key factors such as electrica
 - Required for flashing firmware to the ESP32-S3.
 - Provides stable USB-to-UART communication.
 
+- **Product Link:** [HiLetgo CP2102 - Amazon](https://www.amazon.com/HiLetgo-CP2102-Converter-Adapter-Downloader/dp/B00LODGRV8/ref=asc_df_B00LODGRV8?mcid=f769787d268d36d0b7198a3ca2ef4ffc&hvocijid=1662806867067399458-B00LODGRV8-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=730352155585&hvpos=&hvnetw=g&hvrand=1662806867067399458&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9030136&hvtargid=pla-2281435178538&psc=1)
+
 ### **6. Surface-Mount Push Buttons - Omron B3U Series**
 - Used for RESET and BOOT mode selection.
 - Compact and easy to integrate into the PCB.
