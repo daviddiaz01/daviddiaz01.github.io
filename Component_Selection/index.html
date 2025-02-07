@@ -12,14 +12,14 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/">
+        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Component_Selection/">
+      
+      
+        <link rel="prev" href="../Block_Diagram/">
       
       
       
-        <link rel="next" href="Block_Diagram/">
-      
-      
-      <link rel="icon" href="static/logo.png">
+      <link rel="icon" href="../static/logo.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.4.0">
             
 
@@ -27,14 +27,14 @@
 
     
       
-        <title>Welcome - EGR314 Report Template</title>
+        <title>Component Selection for Sensor Subsystem - EGR314 Report Template</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.9f615399.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.9f615399.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.649f08f9.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.649f08f9.min.css">
       
       
 
@@ -53,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     
 
 
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -73,7 +73,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-my-page" class="md-skip">
+        <a href="#component-selection-for-sensor-subsystem" class="md-skip">
           Skip to content
         </a>
       
@@ -107,9 +107,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="EGR314 Report Template" class="md-header__button md-logo" aria-label="EGR314 Report Template" data-md-component="logo">
+    <a href=".." title="EGR314 Report Template" class="md-header__button md-logo" aria-label="EGR314 Report Template" data-md-component="logo">
       
-  <img src="static/logo.svg" alt="logo">
+  <img src="../static/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome
+              Component Selection for Sensor Subsystem
             
           </span>
         </div>
@@ -198,11 +198,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
         
   
     
@@ -219,7 +217,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="Block_Diagram/" class="md-tabs__link">
+      <a href="../Block_Diagram/" class="md-tabs__link">
         
   
     
@@ -234,9 +232,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="Component_Selection/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -276,9 +276,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="EGR314 Report Template" class="md-nav__button md-logo" aria-label="EGR314 Report Template" data-md-component="logo">
+    <a href=".." title="EGR314 Report Template" class="md-nav__button md-logo" aria-label="EGR314 Report Template" data-md-component="logo">
       
-  <img src="static/logo.svg" alt="logo">
+  <img src="../static/logo.svg" alt="logo">
 
     </a>
     EGR314 Report Template
@@ -302,6 +302,44 @@
       
   
   
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Block_Diagram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Block Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -310,23 +348,25 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Welcome
+    Component Selection for Sensor Subsystem
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Welcome
+    Component Selection for Sensor Subsystem
   </span>
   
 
@@ -338,6 +378,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -346,44 +388,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-to-my-page" class="md-nav__link">
-    Welcome to My Page
+  <a href="#introduction" class="md-nav__link">
+    Introduction
   </a>
   
-    <nav class="md-nav" aria-label="Welcome to My Page">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#major-components" class="md-nav__link">
+    Major Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#justification-of-component-choices" class="md-nav__link">
+    Justification of Component Choices
+  </a>
+  
+    <nav class="md-nav" aria-label="Justification of Component Choices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#about-me" class="md-nav__link">
-    About Me
+  <a href="#1-color-sensor-opt4060-rgbw" class="md-nav__link">
+    1. Color Sensor - OPT4060 RGBW
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#key-interests" class="md-nav__link">
-    Key Interests:
+  <a href="#2-microcontroller-esp32-s3-wroom-1-n4" class="md-nav__link">
+    2. Microcontroller - ESP32-S3-WROOM-1-N4
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#professional-attributes" class="md-nav__link">
-    Professional Attributes
+  <a href="#3-voltage-regulator-adpl44002-33" class="md-nav__link">
+    3. Voltage Regulator - ADPL44002-3.3
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#project-overview" class="md-nav__link">
-    Project Overview
+  <a href="#4-power-supply-12v-ac-dc-adapter" class="md-nav__link">
+    4. Power Supply - 12V AC-DC Adapter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#block-diagram" class="md-nav__link">
-    Block Diagram
+  <a href="#5-usb-to-serial-adapter-hiletgo-cp2102" class="md-nav__link">
+    5. USB-to-Serial Adapter - HiLetgo CP2102
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-surface-mount-push-buttons-omron-b3u-series" class="md-nav__link">
+    6. Surface-Mount Push Buttons - Omron B3U Series
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-capacitors-cin-cout-css" class="md-nav__link">
+    7. Capacitors (CIN, COUT, CSS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+    <nav class="md-nav" aria-label="Conclusion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-notes" class="md-nav__link">
+    Final Notes
   </a>
   
 </li>
@@ -397,44 +494,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Block_Diagram/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Block Diagram
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Component_Selection/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Component Selection for Sensor Subsystem
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -456,6 +515,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -464,44 +525,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-to-my-page" class="md-nav__link">
-    Welcome to My Page
+  <a href="#introduction" class="md-nav__link">
+    Introduction
   </a>
   
-    <nav class="md-nav" aria-label="Welcome to My Page">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#major-components" class="md-nav__link">
+    Major Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#justification-of-component-choices" class="md-nav__link">
+    Justification of Component Choices
+  </a>
+  
+    <nav class="md-nav" aria-label="Justification of Component Choices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#about-me" class="md-nav__link">
-    About Me
+  <a href="#1-color-sensor-opt4060-rgbw" class="md-nav__link">
+    1. Color Sensor - OPT4060 RGBW
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#key-interests" class="md-nav__link">
-    Key Interests:
+  <a href="#2-microcontroller-esp32-s3-wroom-1-n4" class="md-nav__link">
+    2. Microcontroller - ESP32-S3-WROOM-1-N4
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#professional-attributes" class="md-nav__link">
-    Professional Attributes
+  <a href="#3-voltage-regulator-adpl44002-33" class="md-nav__link">
+    3. Voltage Regulator - ADPL44002-3.3
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#project-overview" class="md-nav__link">
-    Project Overview
+  <a href="#4-power-supply-12v-ac-dc-adapter" class="md-nav__link">
+    4. Power Supply - 12V AC-DC Adapter
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#block-diagram" class="md-nav__link">
-    Block Diagram
+  <a href="#5-usb-to-serial-adapter-hiletgo-cp2102" class="md-nav__link">
+    5. USB-to-Serial Adapter - HiLetgo CP2102
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-surface-mount-push-buttons-omron-b3u-series" class="md-nav__link">
+    6. Surface-Mount Push Buttons - Omron B3U Series
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-capacitors-cin-cout-css" class="md-nav__link">
+    7. Capacitors (CIN, COUT, CSS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+    <nav class="md-nav" aria-label="Conclusion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-notes" class="md-nav__link">
+    Final Notes
   </a>
   
 </li>
@@ -526,7 +642,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Component_Selection.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -534,47 +650,134 @@
   
 
 
-  <h1>Welcome</h1>
-
-<h2 id="welcome-to-my-page">Welcome to My Page</h2>
-<h3 id="about-me">About Me</h3>
-<p>Hello, my name is <strong>David Diaz</strong>. I am an aspiring engineer passionate about embedded systems and automation.  </p>
-<h3 id="key-interests">Key Interests:</h3>
-<ul>
-<li>Embedded Systems Design  </li>
-<li>Automation &amp; Control Systems  </li>
-<li>PCB Design &amp; Microcontrollers  </li>
-</ul>
-<h3 id="professional-attributes">Professional Attributes</h3>
+<h1 id="component-selection-for-sensor-subsystem">Component Selection for Sensor Subsystem</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This document outlines the selection of major components for the sensor subsystem in the line-following robot. Each component is chosen based on its performance, compatibility, and integration with the ESP32-S3 microcontroller.</p>
+<h2 id="major-components">Major Components</h2>
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Description</th>
+<th><strong>Component Type</strong></th>
+<th><strong>Component Name</strong></th>
+<th><strong>Function in the System</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>David</td>
-<td>Innovative Thinker</td>
+<td><strong>Color Sensor</strong></td>
+<td>OPT4060 RGBW</td>
+<td>Detects line contrast and sends data via I2C</td>
 </tr>
 <tr>
-<td>David</td>
-<td>Problem Solver</td>
+<td><strong>Microcontroller</strong></td>
+<td>ESP32-S3-WROOM-1-N4</td>
+<td>Processes sensor data, controls robot functions</td>
+</tr>
+<tr>
+<td><strong>Voltage Regulator</strong></td>
+<td>ADPL44002-3.3</td>
+<td>Steps down 12V to <strong>3.3V</strong> to power ESP32 and sensor</td>
+</tr>
+<tr>
+<td><strong>Power Supply</strong></td>
+<td>12V AC-DC Adapter</td>
+<td>Provides power to the voltage regulator</td>
+</tr>
+<tr>
+<td><strong>USB-to-Serial Adapter</strong></td>
+<td>HiLetgo CP2102</td>
+<td>Required for programming ESP32-S3 via USB</td>
+</tr>
+<tr>
+<td><strong>Push Button (RESET)</strong></td>
+<td>Omron B3U Series (SMT)</td>
+<td>Connects <strong>EN (RESET) to GND</strong> to restart ESP32</td>
+</tr>
+<tr>
+<td><strong>Push Button (BOOT Mode)</strong></td>
+<td>Omron B3U Series (SMT)</td>
+<td>Connects <strong>GPIO0 to GND</strong> to enter boot mode</td>
+</tr>
+<tr>
+<td><strong>Switch (Enable ON/OFF)</strong></td>
+<td>Omron B3U Series (SMT)</td>
+<td>Controls the <strong>EN pin</strong> to turn the regulator ON/OFF</td>
+</tr>
+<tr>
+<td><strong>Input Capacitor (CIN)</strong></td>
+<td>2.2µF (Ceramic, SMD 0805)</td>
+<td>Filters noise and stabilizes <strong>VIN</strong></td>
+</tr>
+<tr>
+<td><strong>Output Capacitor (COUT)</strong></td>
+<td>2.2µF (Ceramic, SMD 0805)</td>
+<td>Stabilizes <strong>VOUT (3.3V output)</strong></td>
+</tr>
+<tr>
+<td><strong>Soft-Start Capacitor (CSS)</strong></td>
+<td>1nF (Ceramic, SMD 0805)</td>
+<td>Controls <strong>soft-start delay</strong> to prevent inrush current</td>
 </tr>
 </tbody>
 </table>
-<h3 id="project-overview">Project Overview</h3>
-<p>Below is an outline of the steps I follow in my technical projects:  </p>
+<h2 id="justification-of-component-choices">Justification of Component Choices</h2>
+<p>Each of the above components was selected based on key factors such as electrical compatibility, ease of PCB integration, and availability.</p>
+<h3 id="1-color-sensor-opt4060-rgbw"><strong>1. Color Sensor - OPT4060 RGBW</strong></h3>
+<ul>
+<li>Provides accurate RGBW color detection.</li>
+<li>Uses I2C communication, simplifying data transfer.</li>
+<li>Compact and reliable for high-speed line tracking.</li>
+</ul>
+<h3 id="2-microcontroller-esp32-s3-wroom-1-n4"><strong>2. Microcontroller - ESP32-S3-WROOM-1-N4</strong></h3>
+<ul>
+<li>High-performance microcontroller with WiFi and Bluetooth capabilities.</li>
+<li>Supports multiple I2C and UART peripherals for sensor communication.</li>
+<li>Surface-mount package ensures compact PCB design.</li>
+</ul>
+<h3 id="3-voltage-regulator-adpl44002-33"><strong>3. Voltage Regulator - ADPL44002-3.3</strong></h3>
+<ul>
+<li>Steps down <strong>12V to 3.3V</strong> efficiently.</li>
+<li>Low noise and high power stability.</li>
+<li>Requires minimal external components for integration.</li>
+</ul>
+<h3 id="4-power-supply-12v-ac-dc-adapter"><strong>4. Power Supply - 12V AC-DC Adapter</strong></h3>
+<ul>
+<li>Provides a stable <strong>12V power source</strong>.</li>
+<li>Compatible with voltage regulator and ESP32 power requirements.</li>
+</ul>
+<h3 id="5-usb-to-serial-adapter-hiletgo-cp2102"><strong>5. USB-to-Serial Adapter - HiLetgo CP2102</strong></h3>
+<ul>
+<li>Required for flashing firmware to the ESP32-S3.</li>
+<li>Provides stable USB-to-UART communication.</li>
+</ul>
+<h3 id="6-surface-mount-push-buttons-omron-b3u-series"><strong>6. Surface-Mount Push Buttons - Omron B3U Series</strong></h3>
+<ul>
+<li>Used for <strong>RESET</strong> and <strong>BOOT mode selection</strong>.</li>
+<li>Compact and easy to integrate into the PCB.</li>
+<li>Provides long operational life.</li>
+</ul>
+<h3 id="7-capacitors-cin-cout-css"><strong>7. Capacitors (CIN, COUT, CSS)</strong></h3>
+<ul>
+<li><strong>CIN (2.2µF, Ceramic, SMD 0805)</strong> - Stabilizes input voltage.</li>
+<li><strong>COUT (2.2µF, Ceramic, SMD 0805)</strong> - Ensures stable 3.3V output.</li>
+<li><strong>CSS (1nF, Ceramic, SMD 0805)</strong> - Soft-start functionality.</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>This component selection ensures that the <strong>sensor subsystem</strong> operates efficiently with the ESP32-S3, providing <strong>accurate color detection</strong> and stable power regulation.</p>
+<hr />
+<h3 id="next-steps"><strong>Next Steps</strong></h3>
 <ol>
-<li><strong>Research &amp; Planning</strong> – Understanding the problem and defining key requirements.  </li>
-<li><strong>Design &amp; Development</strong> – Implementing hardware and software solutions.  </li>
-<li><strong>Testing &amp; Optimization</strong> – Refining and improving performance.  </li>
+<li>Research and compare alternative components (Step 2).  </li>
+<li>Verify PCB footprints and finalize the circuit design.  </li>
+<li>Begin PCB layout in <strong>KiCad</strong> and prepare for manufacturing.</li>
 </ol>
 <hr />
-<p>This version maintains a professional tone while making your content clearer and more structured. 🚀</p>
-<h3 id="block-diagram">Block Diagram</h3>
-<p><a class="glightbox" href="../images/block.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Block Diagram" src="../images/block.png" /></a></p>
+<h3 id="final-notes"><strong>Final Notes</strong></h3>
+<p>✅ <strong>Now you have a structured Component Selection document</strong>.<br />
+✅ <strong>Ready to commit changes to GitHub</strong>.<br />
+✅ <strong>Next, move to Step 2 (Alternative Component Research)</strong>.  </p>
+<p>Let me know if you need adjustments! 🚀</p>
 
 
 
@@ -601,22 +804,22 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
-        
           
-          <a href="Block_Diagram/" class="md-footer__link md-footer__link--next" aria-label="Next: Block Diagram" rel="next">
+          <a href="../Block_Diagram/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Block Diagram" rel="prev">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Next
+                Previous
               </span>
               <div class="md-ellipsis">
                 Block Diagram
               </div>
             </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
           </a>
+        
         
       </nav>
     
@@ -653,12 +856,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.follow", "navigation.top", "navigation.path", "navigation.indexes", "navigation.prune", "content.action.edit", "navigation.footer"], "search": "assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.follow", "navigation.top", "navigation.path", "navigation.indexes", "navigation.prune", "content.action.edit", "navigation.footer"], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      <script src="../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
