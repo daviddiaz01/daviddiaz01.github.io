@@ -49,7 +49,7 @@ Each of the above components was selected based on key factors such as electrica
 
 ![Color Sensor](images/Color_Sensornew.png)
 
-
+---
 
 ### **2. Microcontroller - ESP32-S3-WROOM-1-N4**
 - High-performance microcontroller with WiFi and Bluetooth capabilities.
@@ -59,6 +59,10 @@ Each of the above components was selected based on key factors such as electrica
 - **Product Link:** [ESP32-S3-WROOM-1-N4 - DigiKey](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639)
 - **Datasheet:** [ESP32-S3-WROOM-1-N4 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)
 
+![ESP32](images/ESP32.png)
+
+---
+
 ### **3. Voltage Regulator - ADPL44002-3.3**
 - Steps down 12V to 3.3V efficiently.
 - Low noise and high power stability.
@@ -67,6 +71,10 @@ Each of the above components was selected based on key factors such as electrica
 - **Product Link:** [ADPL44002-3.3 - DigiKey](https://www.digikey.com/en/products/detail/analog-devices-inc/ADPL44002AUJZ-3-3-R7/25803461)
 - **Datasheet:** [ADPL44002-3.3 Datasheet](https://www.mouser.com/datasheet/2/609/1/adpl44002-3535120.pdf)
 
+![Regulator](images/Regulator.png)
+
+---
+
 ### **4. Power Supply - 12V AC-DC Adapter**
 - Provides a stable 12V power source.
 - Compatible with voltage regulator and ESP32 power requirements.
@@ -74,11 +82,17 @@ Each of the above components was selected based on key factors such as electrica
 - **Product Link:** [Tri-Mag L6R06H-120 - DigiKey](https://www.digikey.lv/en/products/detail/tri-mag-llc/L6R06H-120/7682617)
 - **Datasheet:** [Tri-Mag L6R06H-120 Datasheet](https://www.tri-mag.com/wp-content/uploads/2021/05/L6R06H_Series_2021-02a.pdf)
 
+---
+
 ### **5. USB-to-Serial Adapter - HiLetgo CP2102**
 - Required for flashing firmware to the ESP32-S3.
 - Provides stable USB-to-UART communication.
 
 - **Product Link:** [HiLetgo CP2102 - Amazon](https://www.amazon.com/HiLetgo-CP2102-Converter-Adapter-Downloader/dp/B00LODGRV8/ref=asc_df_B00LODGRV8?mcid=f769787d268d36d0b7198a3ca2ef4ffc&hvocijid=1662806867067399458-B00LODGRV8-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=730352155585&hvpos=&hvnetw=g&hvrand=1662806867067399458&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9030136&hvtargid=pla-2281435178538&psc=1)
+
+![Adapter](images/Adapter.png)
+
+---
 
 ### **6. Surface-Mount Push Buttons - Omron B3U Series**
 - Used for RESET and BOOT mode selection.
@@ -87,6 +101,10 @@ Each of the above components was selected based on key factors such as electrica
 
 - **Product Link:** [Omron B3U-1000P - Mouser](https://www.mouser.com/ProductDetail/Omron-Electronics/B3U-1000P?qs=AO7BQMcsEu4ip80xyf2FwA%3D%3D&srsltid=AfmBOorCcS8cTuZ0dYUN8hCGonExu1E_8fJmpz2IEKzbWOCu_5lntN5z)
 - **Datasheet:** [Omron B3U-1000P Datasheet](https://www.mouser.com/datasheet/2/307/en_b3u-3476507.pdf)
+
+![Switch](images/Switch.png)
+
+---
 
 ### **7. Capacitors (CIN, COUT, CSS) for regulator**
 - CIN (2.2µF, Ceramic, SMD 0805) - Stabilizes input voltage.
