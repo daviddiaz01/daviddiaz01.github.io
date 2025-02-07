@@ -1,7 +1,11 @@
-# Component Selection for Sensor Subsystem
+# Component Selection for Sensor Subsystem  
+### David Diaz  
+### EGR 314 - Sensor Subsystem  
 
 ## Introduction
-This document outlines the selection of major components for the sensor subsystem in the line-following robot. Each component is chosen based on its performance, compatibility, and integration with the ESP32-S3 microcontroller.
+The sensor subsystem of the line-following robot detects and interprets the path, allowing precise navigation. It includes a color sensor to read contrast and an ESP32-S3 microcontroller to process data and control movement.
+
+This document outlines the selection of key components based on performance, compatibility, and integration, ensuring efficient operation and seamless communication within the system.
 
 ## **Project Components Overview**
 
