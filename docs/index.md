@@ -29,5 +29,4 @@ As part of this team project, I am responsible for the Sensor Subsystem, which p
 
 ---
 
-Let me know if you need any refinements! 🚀
 
