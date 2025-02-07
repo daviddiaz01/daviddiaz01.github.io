@@ -49,6 +49,9 @@ Each of the above components was selected based on key factors such as electrica
 - Supports multiple I2C and UART peripherals for sensor communication.
 - Surface-mount package ensures compact PCB design.
 
+- **Product Link:** [ESP32-S3-WROOM-1-N4 - DigiKey](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639)
+- **Datasheet:** [ESP32-S3-WROOM-1-N4 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)
+
 ### **3. Voltage Regulator - ADPL44002-3.3**
 - Steps down **12V to 3.3V** efficiently.
 - Low noise and high power stability.
