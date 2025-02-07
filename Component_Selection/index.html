@@ -402,6 +402,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#component-comparison-justification" class="md-nav__link">
+    Component Comparison &amp; Justification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#justification-of-component-choices" class="md-nav__link">
     Justification of Component Choices
   </a>
@@ -514,6 +521,13 @@
         <li class="md-nav__item">
   <a href="#major-components" class="md-nav__link">
     Major Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-comparison-justification" class="md-nav__link">
+    Component Comparison &amp; Justification
   </a>
   
 </li>
@@ -680,6 +694,75 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="component-comparison-justification">Component Comparison &amp; Justification</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Component Type</strong></th>
+<th><strong>Option</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microcontroller</strong></td>
+<td><strong>ESP32-S3-WROOM-1-N4</strong> (Chosen)</td>
+<td>Powerful dual-core, WiFi &amp; Bluetooth, SMD, multiple GPIO &amp; I2C</td>
+<td>Requires external USB-UART adapter for flashing</td>
+</tr>
+<tr>
+<td></td>
+<td>ESP8266</td>
+<td>Cheaper, WiFi-enabled, good for basic IoT</td>
+<td>Less RAM, fewer peripherals, no Bluetooth</td>
+</tr>
+<tr>
+<td></td>
+<td>STM32F411CEU6</td>
+<td>Powerful ARM Cortex-M4, many peripherals</td>
+<td>No built-in WiFi/Bluetooth, requires external wireless module</td>
+</tr>
+<tr>
+<td><strong>Color Sensor</strong></td>
+<td><strong>OPT4060 RGBW</strong> (Chosen)</td>
+<td>High-accuracy RGBW detection, I2C interface, compact SMD package</td>
+<td>More expensive than basic color sensors</td>
+</tr>
+<tr>
+<td></td>
+<td>TCS34725 RGB Sensor</td>
+<td>Low cost, built-in IR blocking filter</td>
+<td>Lower accuracy, larger footprint</td>
+</tr>
+<tr>
+<td></td>
+<td>AS7341 Spectral Sensor</td>
+<td>High precision with spectral channels</td>
+<td>More complex to interface, higher power consumption</td>
+</tr>
+<tr>
+<td><strong>Voltage Regulator</strong></td>
+<td><strong>ADPL44002-3.3</strong> (Chosen)</td>
+<td>High efficiency, compact, low noise</td>
+<td>Requires external capacitors for stability</td>
+</tr>
+<tr>
+<td></td>
+<td>AMS1117-3.3 LDO</td>
+<td>Simple, low cost, easy to use</td>
+<td>Less efficient (linear regulator), dissipates more heat</td>
+</tr>
+<tr>
+<td></td>
+<td>MP2315 Switching Regulator</td>
+<td>Higher efficiency, adjustable voltage output</td>
+<td>Requires more external components, more complex circuit design</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="justification-of-component-choices">Justification of Component Choices</h2>
 <p>Each of the above components was selected based on key factors such as electrical compatibility, ease of PCB integration, and availability.</p>
 <h3 id="1-color-sensor-opt4060-rgbw"><strong>1. Color Sensor - OPT4060 RGBW</strong></h3>
