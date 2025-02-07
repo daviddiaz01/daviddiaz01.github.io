@@ -5,9 +5,10 @@ This document outlines the selection of major components for the sensor subsyste
 
 ## **Project Components Overview**
 
-| **Microcontroller** | **Voltage Regulator** | **Switch** | **USB-to-Serial Adapter** | **Color Sensor** |
-|--------------------|----------------------|------------|--------------------------|------------------|
-| ![ESP32](images/ESP32.png) | ![Regulator](images/Regulator.png) | ![Switch](images/Switch.png) | ![Adapter](images/Adapter.png) | ![Color Sensor](images/Color_Sensornew.png) |
+| **Microcontroller** | **Voltage Regulator** | **Switch** | **USB-to-Serial Adapter** | **Color Sensor** | **USB Connector** | **Barrel Jack** | **Capacitor** |
+|--------------------|----------------------|------------|--------------------------|------------------|------------------|---------------|-------------|
+| ![ESP32](images/ESP32.png) | ![Regulator](images/Regulator.png) | ![Switch](images/Switch.png) | ![Adapter](images/Adapter.png) | ![Color Sensor](images/Color_Sensornew.png) | ![USB](images/USB.png) | ![Barrel Jack](images/Barrel_Jack.png) | ![Capacitor](images/Capacitor.png) |
+
 
 
 ## Major Components
@@ -99,7 +100,7 @@ Each of the above components was selected based on key factors such as electrica
 
 - **Product Link:** [HiLetgo CP2102 - Amazon](https://www.amazon.com/HiLetgo-CP2102-Converter-Adapter-Downloader/dp/B00LODGRV8/ref=asc_df_B00LODGRV8?mcid=f769787d268d36d0b7198a3ca2ef4ffc&hvocijid=1662806867067399458-B00LODGRV8-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=730352155585&hvpos=&hvnetw=g&hvrand=1662806867067399458&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9030136&hvtargid=pla-2281435178538&psc=1)
 
-
+![USB](images/USB.png)
 
 ---
 
@@ -126,6 +127,8 @@ Each of the above components was selected based on key factors such as electrica
 
 - **Product Link:** [KEMET C0805C102J5GAC7800 - DigiKey](https://www.digikey.com/en/products/detail/kemet/C0805C102J5GAC7800/411135)
 - **Datasheet:** [KEMET C0805C102J5GAC7800 Datasheet](https://content.kemet.com/datasheets/KEM_C1003_C0G_SMD.pdf)
+
+![Capacitor](images/Capacitor.png)
 
 ---
 
