@@ -19,6 +19,23 @@ This document outlines the selection of major components for the sensor subsyste
 | **Output Capacitor (COUT)** | 2.2µF (Ceramic, SMD 0805) | Stabilizes VOUT (3.3V output)for regulator |
 | **Soft-Start Capacitor (CSS)** | 1nF (Ceramic, SMD 0805) | Controls soft-start delay to prevent inrush current for regulator |
 
+---
+
+## Component Comparison & Justification
+| **Component Type**  | **Option**                     | **Pros**                                                              | **Cons**                                                                |
+|--------------------|--------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------|
+| **Microcontroller** | **ESP32-S3-WROOM-1-N4** (Chosen) | Powerful dual-core, WiFi & Bluetooth, SMD, multiple GPIO & I2C      | Requires external USB-UART adapter for flashing                        |
+|                     | ESP8266                       | Cheaper, WiFi-enabled, good for basic IoT                           | Less RAM, fewer peripherals, no Bluetooth                             |
+|                     | STM32F411CEU6                 | Powerful ARM Cortex-M4, many peripherals                            | No built-in WiFi/Bluetooth, requires external wireless module         |
+| **Color Sensor**   | **OPT4060 RGBW** (Chosen)     | High-accuracy RGBW detection, I2C interface, compact SMD package     | More expensive than basic color sensors                                |
+|                    | TCS34725 RGB Sensor           | Low cost, built-in IR blocking filter                                | Lower accuracy, larger footprint                                      |
+|                    | AS7341 Spectral Sensor        | High precision with spectral channels                                | More complex to interface, higher power consumption                   |
+| **Voltage Regulator** | **ADPL44002-3.3** (Chosen) | High efficiency, compact, low noise                                 | Requires external capacitors for stability                            |
+|                    | AMS1117-3.3 LDO               | Simple, low cost, easy to use                                       | Less efficient (linear regulator), dissipates more heat               |
+|                    | MP2315 Switching Regulator    | Higher efficiency, adjustable voltage output                         | Requires more external components, more complex circuit design        |
+
+---
+
 ## Justification of Component Choices
 Each of the above components was selected based on key factors such as electrical compatibility, ease of PCB integration, and availability.
 
