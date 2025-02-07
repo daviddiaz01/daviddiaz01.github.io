@@ -53,9 +53,12 @@ Each of the above components was selected based on key factors such as electrica
 - **Datasheet:** [ESP32-S3-WROOM-1-N4 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)
 
 ### **3. Voltage Regulator - ADPL44002-3.3**
-- Steps down **12V to 3.3V** efficiently.
+- Steps down 12V to 3.3V efficiently.
 - Low noise and high power stability.
 - Requires minimal external components for integration.
+
+- **Product Link:** [ADPL44002-3.3 - DigiKey](https://www.digikey.com/en/products/detail/analog-devices-inc/ADPL44002AUJZ-3-3-R7/25803461)
+- **Datasheet:** [ADPL44002-3.3 Datasheet](https://www.mouser.com/datasheet/2/609/1/adpl44002-3535120.pdf)
 
 ### **4. Power Supply - 12V AC-DC Adapter**
 - Provides a stable 12V power source.
