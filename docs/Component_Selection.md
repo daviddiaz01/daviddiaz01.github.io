@@ -3,6 +3,13 @@
 ## Introduction
 This document outlines the selection of major components for the sensor subsystem in the line-following robot. Each component is chosen based on its performance, compatibility, and integration with the ESP32-S3 microcontroller.
 
+## **Project Components Overview**
+
+| **Microcontroller** | **Voltage Regulator** | **Switch** | **USB-to-Serial Adapter** | **Color Sensor** |
+|--------------------|----------------------|------------|--------------------------|------------------|
+| ![ESP32](images/ESP32.png) | ![Regulator](images/Regulator.png) | ![Switch](images/Switch.png) | ![Adapter](images/Adapter.png) | ![Color Sensor](images/Color_Sensornew.png) |
+
+
 ## Major Components
 
 | **Component Type** | **Component Name** | **Function in the System** |
