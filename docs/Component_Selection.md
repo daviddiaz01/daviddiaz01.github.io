@@ -47,6 +47,9 @@ Each of the above components was selected based on key factors such as electrica
 - **Product Link:** [OPT4060 RGBW - DigiKey](https://www.digikey.lv/en/products/detail/texas-instruments/OPT4060DTSR/22116843)
 - **Datasheet:** [OPT4060 RGBW Datasheet](https://www.ti.com/lit/ds/symlink/opt4060.pdf?ts=1704223000280)
 
+![Color Sensor](images/Color_Sensornew.png)
+
+
 
 ### **2. Microcontroller - ESP32-S3-WROOM-1-N4**
 - High-performance microcontroller with WiFi and Bluetooth capabilities.
