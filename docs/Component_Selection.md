@@ -9,9 +9,9 @@ This document outlines the selection of key components based on performance, com
 
 ## **Project Components Overview**
 
-| **Microcontroller** | **Voltage Regulator** | **Switch** | **USB-to-Serial Adapter** | **Color Sensor** | **USB Connector** | **Barrel Jack** | **Capacitor** |
-|--------------------|----------------------|------------|--------------------------|------------------|------------------|---------------|-------------|
-| ![ESP32](images/ESP32.png) | ![Regulator](images/Regulator.png) | ![Switch](images/Switch.png) | ![Adapter](images/Adapter.png) | ![Color Sensor](images/Color_Sensornew.png) | ![USB](images/USB.png) | ![Barrel Jack](images/Barrel_Jack.png) | ![Capacitor](images/Capacitor.png) |
+| **Microcontroller** | **Voltage Regulator** | **Switch** | **Power Supply** | **Color Sensor** | **USB Connector** | **Barrel Jack** |
+|--------------------|----------------------|------------|------------------|------------------|------------------|---------------|
+| ![ESP32](images/ESP32.png) | ![Regulator](images/Regulator.png) | ![Switch](images/Switch.png) | ![Adapter](images/Adapter.png) | ![Color Sensor](images/Color_Sensornew.png) | ![USB](images/USB.png) | ![Barrel Jack](images/Barrel_Jack.png) |
 
 
 
