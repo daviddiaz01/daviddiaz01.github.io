@@ -27,9 +27,7 @@ This document outlines the selection of key components based on performance, com
 | **Push Button (RESET)** | Omron B3U Series (SMT) | Connects EN (RESET) to GND to restart ESP32 |
 | **Push Button (BOOT Mode)** | Omron B3U Series (SMT) | Connects GPIO0 to GND to enter boot mode |
 | **Switch (Enable ON/OFF)** | Omron B3U Series (SMT) | Controls the EN pin to turn the regulator ON/OFF |
-| **Input Capacitor (CIN)** | 2.2µF (Ceramic, SMD 0805) | Filters noise and stabilizes VIN for regulator |
-| **Output Capacitor (COUT)** | 2.2µF (Ceramic, SMD 0805) | Stabilizes VOUT (3.3V output)for regulator |
-| **Soft-Start Capacitor (CSS)** | 1nF (Ceramic, SMD 0805) | Controls soft-start delay to prevent inrush current for regulator |
+
 
 ---
 
@@ -119,21 +117,6 @@ Each of the above components was selected based on key factors such as electrica
 
 ![Switch](images/Switch.png)
 
----
-
-### **7. Capacitors (CIN, COUT, CSS) for regulator**
-- CIN (2.2µF, Ceramic, SMD 0805) - Stabilizes input voltage.
-- COUT (2.2µF, Ceramic, SMD 0805) - Ensures stable 3.3V output.
-
-- **Product Link:** [KEMET C0805C225K8PACTU - DigiKey](https://www.digikey.com/en/products/detail/kemet/C0805C225K8PACTU/551630)
-- **Datasheet:** [KEMET C0805C225K8PACTU Datasheet](https://content.kemet.com/datasheets/KEM_C1006_X5R_SMD.pdf)
-  
-- CSS (1nF, Ceramic, SMD 0805) - Soft-start functionality.
-
-- **Product Link:** [KEMET C0805C102J5GAC7800 - DigiKey](https://www.digikey.com/en/products/detail/kemet/C0805C102J5GAC7800/411135)
-- **Datasheet:** [KEMET C0805C102J5GAC7800 Datasheet](https://content.kemet.com/datasheets/KEM_C1003_C0G_SMD.pdf)
-
-![Capacitor](images/Capacitor.png)
 
 ---
 
