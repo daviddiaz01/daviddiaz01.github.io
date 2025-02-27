@@ -12,11 +12,13 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Schematic/">
+        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Power_Budget/">
       
       
-        <link rel="prev" href="../Power_Budget/">
+        <link rel="prev" href="../Component_Selection/">
       
+      
+        <link rel="next" href="../Schematic/">
       
       
       <link rel="icon" href="../static/logo.png">
@@ -27,7 +29,7 @@
 
     
       
-        <title>Individual Sensor Subsystem Schematic - EGR314 Report Template</title>
+        <title>Power Budget - EGR314 Report Template</title>
       
     
     
@@ -91,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#individual-sensor-subsystem-schematic" class="md-skip">
+        <a href="#power-budget" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Individual Sensor Subsystem Schematic
+              Power Budget
             
           </span>
         </div>
@@ -249,9 +251,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../Power_Budget/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -266,11 +270,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../Schematic/" class="md-tabs__link">
         
   
     
@@ -393,25 +395,6 @@
       
   
   
-  
-    <li class="md-nav__item">
-      <a href="../Power_Budget/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Power Budget
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -427,7 +410,7 @@
           
   
   <span class="md-ellipsis">
-    Individual Sensor Subsystem Schematic
+    Power Budget
   </span>
   
 
@@ -438,7 +421,7 @@
         
   
   <span class="md-ellipsis">
-    Individual Sensor Subsystem Schematic
+    Power Budget
   </span>
   
 
@@ -460,9 +443,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#schematic-diagram" class="md-nav__link">
-    Schematic Diagram
+  <a href="#power-budget-overview" class="md-nav__link">
+    Power Budget Overview
   </a>
+  
+    <nav class="md-nav" aria-label="Power Budget Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#component-breakdown" class="md-nav__link">
+    Component Breakdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#total-estimated-power-consumption" class="md-nav__link">
+    Total Estimated Power Consumption
+  </a>
+  
+    <nav class="md-nav" aria-label="Total Estimated Power Consumption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regulator-efficiency-considerations" class="md-nav__link">
+    Regulator Efficiency Considerations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -470,6 +486,25 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Schematic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Individual Sensor Subsystem Schematic
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -501,9 +536,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#schematic-diagram" class="md-nav__link">
-    Schematic Diagram
+  <a href="#power-budget-overview" class="md-nav__link">
+    Power Budget Overview
   </a>
+  
+    <nav class="md-nav" aria-label="Power Budget Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#component-breakdown" class="md-nav__link">
+    Component Breakdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#total-estimated-power-consumption" class="md-nav__link">
+    Total Estimated Power Consumption
+  </a>
+  
+    <nav class="md-nav" aria-label="Total Estimated Power Consumption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regulator-efficiency-considerations" class="md-nav__link">
+    Regulator Efficiency Considerations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -522,7 +590,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Schematic.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Power_Budget.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -530,9 +598,76 @@
   
 
 
-<h1 id="individual-sensor-subsystem-schematic">Individual Sensor Subsystem Schematic</h1>
-<h2 id="schematic-diagram">Schematic Diagram</h2>
-<p><a class="glightbox" href="../images/SchemativcSensorSubsystem.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Schematic" src="../images/SchemativcSensorSubsystem.jpg" /></a></p>
+<h1 id="power-budget">Power Budget</h1>
+<h2 id="power-budget-overview"><strong>Power Budget Overview</strong></h2>
+<p>This table provides a power budget analysis for the key components in the schematic, ensuring the system meets its power requirements efficiently.</p>
+<h3 id="component-breakdown"><strong>Component Breakdown</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Image</strong></th>
+<th><strong>Voltage (V)</strong></th>
+<th><strong>Current (mA)</strong></th>
+<th><strong>Power (mW)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ESP32-S3-WROOM</strong></td>
+<td><a class="glightbox" href="../images/ESP32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ESP32" src="../images/ESP32.png" /></a></td>
+<td>3.3V</td>
+<td>240mA</td>
+<td><strong>792mW</strong></td>
+</tr>
+<tr>
+<td><strong>LM2575D2T-3.3 Regulator</strong></td>
+<td><a class="glightbox" href="/Regulator.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Regulator" src="/Regulator.png" /></a></td>
+<td>9V Input</td>
+<td>500mA</td>
+<td><strong>4500mW</strong> (Input side)</td>
+</tr>
+<tr>
+<td><strong>OPT4060 Color Sensor</strong></td>
+<td><a class="glightbox" href="../images/Color_Sensornew.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Color Sensor" src="../images/Color_Sensornew.png" /></a></td>
+<td>3.3V</td>
+<td>3mA</td>
+<td><strong>9.9mW</strong></td>
+</tr>
+<tr>
+<td><strong>USB Connector (5V, 500mA max)</strong></td>
+<td><a class="glightbox" href="../images/USB.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="USB" src="../images/USB.png" /></a></td>
+<td>5V</td>
+<td>500mA</td>
+<td><strong>2500mW (2.5W)</strong></td>
+</tr>
+<tr>
+<td><strong>Barrel Jack Adapter</strong></td>
+<td><a class="glightbox" href="../images/Barrel_Jack.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Barrel Jack" src="../images/Barrel_Jack.png" /></a></td>
+<td>9V</td>
+<td>1A</td>
+<td><strong>9000mW</strong></td>
+</tr>
+<tr>
+<td><strong>Debug LED</strong></td>
+<td><a class="glightbox" href="images/LED.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LED" src="images/LED.png" /></a></td>
+<td>3.3V</td>
+<td>10mA</td>
+<td><strong>33mW</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="total-estimated-power-consumption"><strong>Total Estimated Power Consumption</strong></h3>
+<ul>
+<li><strong>Total power draw at 3.3V:</strong> <strong>~850mW</strong></li>
+<li><strong>Total power draw at 9V input:</strong> <strong>~1W</strong> (considering regulator efficiency)</li>
+<li><strong>Peak power consumption via USB (5V):</strong> <strong>~2.5W (500mA max)</strong></li>
+</ul>
+<h4 id="regulator-efficiency-considerations"><strong>Regulator Efficiency Considerations</strong></h4>
+<p>The <strong>LM2575D2T-3.3</strong> is a <strong>switching regulator</strong>, meaning it has higher efficiency (~80-90%).
+- <strong>Estimated output power:</strong> <strong>850mW</strong>
+- <strong>Estimated input power (@ 9V):</strong>  </p>
 
 
 
@@ -560,7 +695,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Power_Budget/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Power Budget" rel="prev">
+          <a href="../Component_Selection/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Component Selection for Sensor Subsystem" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -570,11 +705,27 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Power Budget
+                Component Selection for Sensor Subsystem
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../Schematic/" class="md-footer__link md-footer__link--next" aria-label="Next: Individual Sensor Subsystem Schematic" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Individual Sensor Subsystem Schematic
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
