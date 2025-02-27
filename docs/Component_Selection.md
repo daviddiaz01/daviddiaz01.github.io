@@ -24,9 +24,7 @@ This document outlines the selection of key components based on performance, com
 | **Voltage Regulator** | LM2575D2T-3.3R4G | Steps down 12V to 3.3V to power ESP32 and sensor |
 | **Power Supply** | 12V AC-DC Adapter | Provides power to the voltage regulator |
 | **USB-to-Serial Adapter** | USB3131-30-0230-A | Required for programming ESP32-S3 via USB |
-| **Push Button (RESET)** | Omron B3U Series (SMT) | Connects EN (RESET) to GND to restart ESP32 |
-| **Push Button (BOOT Mode)** | Omron B3U Series (SMT) | Connects GPIO0 to GND to enter boot mode |
-| **Switch (Enable ON/OFF)** | Omron B3U Series (SMT) | Controls the EN pin to turn the regulator ON/OFF |
+| **Switch (Power ON/OFF)** | Panasonic ESB-33535A (SMT) | Controls system power, turning it ON or OFF |
 
 
 ---
@@ -116,7 +114,7 @@ Each of the above components was selected based on key factors such as electrica
 - **Product Link:** [Panasonic ESB-33535A - Digi-Key](https://www.digikey.com/en/products/detail/panasonic-electronic-components/ESB-33535A/3873298)  
 - **Datasheet:** [Panasonic ESB-33535A Datasheet](https://www3.panasonic.biz/ac/cdn/e/control/switch/push/catalog/sw_pu_eng_esb33.pdf)  
 
-![Switch](images/Switch.jpg)
+![Switch](images/Switch.png)
 
 
 
