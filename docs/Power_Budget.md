@@ -13,16 +13,17 @@ This table provides a power budget analysis for the key components in the schema
 | **OPT4060 Color Sensor** | ![Color Sensor](images/Color_Sensornew.png) | 3.3V | 3mA | **9.9mW** |
 | **USB Connector (5V, 500mA max)** | ![USB](images/USB.png) | 5V | 500mA | **2500mW (2.5W)** |
 | **Barrel Jack Adapter** | ![Barrel Jack](images/Barrel_Jack.png) | 9V | 1A | **9000mW** |
-| **Power Switch** | ![Switch](images/Switch.png) | 9V | - | **-** |
-| **Power Adapter** | ![Adapter](images/Adapter.png) | 9V | - | **-** |
+
 ---
 
 ### **Total Estimated Power Consumption**
-- **Total power draw at 3.3V:** **~850mW**
-- **Total power draw at 9V input:** **~1W** (considering regulator efficiency)
-- **Peak power consumption via USB (5V):** **~2.5W (500mA max)**
+- Total power draw at 3.3V: 850mW
+- Total power draw at 9V input: 1W 
+- Peak power consumption via USB (5V): 2.5W (500mA max)
+- Total current draw at 3.3V: 253mA
+- Total current draw from 9V Source: 122mA 
 
-#### **Regulator Efficiency Considerations**
-The **LM2575D2T-3.3** is a **switching regulator**, meaning it has higher efficiency (~80-90%).
-- **Estimated output power:** **850mW**
-- **Estimated input power (@ 9V):**  
+#### Regulator Efficiency Considerations
+The LM2575D2T-3.3 is a switching regulator, meaning it has higher efficiency (80-90%).
+- Estimated output power: 850mW
+- Estimated input power (9V): 1.1W 
