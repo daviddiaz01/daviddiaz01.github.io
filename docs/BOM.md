@@ -1,6 +1,9 @@
 # **Bill of Materials (BOM) - Individual Subsystem**
 
-This BOM outlines all components used in the schematic, along with their specifications, costs, and sourcing information.
+## **PDF Purchase Request**  
+[View Schematic (PDF)](images/EGR314 - Purchase Request - DIGIT KEY.pdf)
+
+
 
 ## **BOM Table**
 
