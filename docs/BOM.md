@@ -1,7 +1,7 @@
 # **Bill of Materials (BOM) - Individual Subsystem**
 
 ## **PDF Purchase Request**  
-[View Schematic (PDF)](images/EGR314_Purchase Request_DIGITKEY.pdf)
+[View (PDF)](images/EGR314_Purchase Request_DIGITKEY.pdf)
 
 
 
