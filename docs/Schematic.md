@@ -6,3 +6,6 @@
 
 ## **PDF Link**  
 [View Schematic (PDF)](images/NEWIndividualSchematicDD_EGR314-1.pdf)
+
+## **Zip File**
+[Download Zip File](images/EGR314_SENSORSUBSYSTEM_DIAZ.zip)
