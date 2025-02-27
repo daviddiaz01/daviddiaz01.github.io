@@ -9,12 +9,12 @@ This table provides a power budget analysis for the key components in the schema
 | **Component**        | **Image** | **Voltage (V)** | **Current (mA)** | **Power (mW)** |
 |----------------------|----------|---------------|----------------|-------------|
 | **ESP32-S3-WROOM**  | ![ESP32](images/ESP32.png) | 3.3V | 240mA | **792mW** |
-| **LM2575D2T-3.3 Regulator** | ![Regulator](/Regulator.png) | 9V Input | 500mA | **4500mW** (Input side) |
+| **LM2575D2T-3.3 Regulator** | ![Regulator](images/Regulator.png) | 9V Input | 500mA | **4500mW** (Input side) |
 | **OPT4060 Color Sensor** | ![Color Sensor](images/Color_Sensornew.png) | 3.3V | 3mA | **9.9mW** |
 | **USB Connector (5V, 500mA max)** | ![USB](images/USB.png) | 5V | 500mA | **2500mW (2.5W)** |
 | **Barrel Jack Adapter** | ![Barrel Jack](images/Barrel_Jack.png) | 9V | 1A | **9000mW** |
-| **Debug LED** | ![LED](images/LED.png) | 3.3V | 10mA | **33mW** |
-
+| **Power Switch** | ![Switch](images/Switch.png) | 9V | - | **-** |
+| **Power Adapter** | ![Adapter](images/Adapter.png) | 9V | - | **-** |
 ---
 
 ### **Total Estimated Power Consumption**
