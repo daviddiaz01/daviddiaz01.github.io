@@ -4,5 +4,5 @@
 ![Schematic](images/SchemativcSensorSubsystem.jpg)
 
 
-## **Schematic PDF Download**  
+## **PDF Link**  
 [View Schematic (PDF)](images/NEWIndividualSchematicDD_EGR314-1.pdf)
