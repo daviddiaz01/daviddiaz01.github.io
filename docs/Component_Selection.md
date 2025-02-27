@@ -107,15 +107,17 @@ Each of the above components was selected based on key factors such as electrica
 
 ---
 
-### **6. Surface-Mount Push Buttons - Omron B3U Series**
-- Used for RESET and BOOT mode selection.
-- Compact and easy to integrate into the PCB.
-- Provides long operational life.
+### **6. Surface-Mount Push Buttons - Panasonic ESB-33535A Series**
+- Used for RESET and BOOT mode selection.  
+- Compact and easy to integrate into the PCB.  
+- Provides long operational life.  
+- **Unit Price:** $1.98 per unit.  
 
-- **Product Link:** [Omron B3U-1000P - Mouser](https://www.mouser.com/ProductDetail/Omron-Electronics/B3U-1000P?qs=AO7BQMcsEu4ip80xyf2FwA%3D%3D&srsltid=AfmBOorCcS8cTuZ0dYUN8hCGonExu1E_8fJmpz2IEKzbWOCu_5lntN5z)
-- **Datasheet:** [Omron B3U-1000P Datasheet](https://www.mouser.com/datasheet/2/307/en_b3u-3476507.pdf)
+- **Product Link:** [Panasonic ESB-33535A - Digi-Key](https://www.digikey.com/en/products/detail/panasonic-electronic-components/ESB-33535A/3873298)  
+- **Datasheet:** [Panasonic ESB-33535A Datasheet](https://www3.panasonic.biz/ac/cdn/e/control/switch/push/catalog/sw_pu_eng_esb33.pdf)  
 
-![Switch](images/Switch.png)
+![Switch](images/Switch.jpg)
+
 
 
 ---
