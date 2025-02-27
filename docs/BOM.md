@@ -1,7 +1,7 @@
 # **Bill of Materials (BOM) - Sensor Subsystem**
 
 ## **PDF Purchase Request**  
-[View (PDF)](EGR314_Purchase_Request_DIGITKEY.pdf)
+[View (PDF)](images/EGR314PurchaseRequestDIGITKEY.pdf)
 
 
 
