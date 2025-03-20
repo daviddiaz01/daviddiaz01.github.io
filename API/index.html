@@ -454,6 +454,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#general-message-format" class="md-nav__link">
+    General Message Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#esp32-requests-sensor-data" class="md-nav__link">
     ESP32 Requests Sensor Data
   </a>
@@ -467,14 +474,21 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#esp32-sends-processed-data-to-motor-oled-and-wifi" class="md-nav__link">
+    ESP32 Sends Processed Data to Motor, OLED, and WiFi
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sensor-subsystem-communication-flow" class="md-nav__link">
-    Sensor Subsystem Communication Flow
+  <a href="#sensor-api-communication-flow" class="md-nav__link">
+    Sensor API Communication Flow
   </a>
   
 </li>
@@ -631,6 +645,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#general-message-format" class="md-nav__link">
+    General Message Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#esp32-requests-sensor-data" class="md-nav__link">
     ESP32 Requests Sensor Data
   </a>
@@ -644,14 +665,21 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#esp32-sends-processed-data-to-motor-oled-and-wifi" class="md-nav__link">
+    ESP32 Sends Processed Data to Motor, OLED, and WiFi
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sensor-subsystem-communication-flow" class="md-nav__link">
-    Sensor Subsystem Communication Flow
+  <a href="#sensor-api-communication-flow" class="md-nav__link">
+    Sensor API Communication Flow
   </a>
   
 </li>
@@ -688,13 +716,52 @@
 
 <h1 id="sensor-subsystem-api-documentation">Sensor Subsystem API Documentation</h1>
 <h2 id="introduction">Introduction</h2>
-<p>The Sensor Subsystem is responsible for detecting line contrast using the OPT4060 RGBW Color Sensor and transmitting this data to the ESP32-S3-WROOM-1-N4 via I²C. The ESP32 processes the sensor data and forwards it over UART for further use in the system.</p>
-<p>This document outlines:
-- The message structure for sending and receiving sensor data.
-- The data format ensuring compliance with the UART daisy chain protocol.
-- The handling of malformed messages and acknowledgment processes.</p>
+<p>The Sensor Subsystem detects line contrast using the OPT4060 RGBW Color Sensor and communicates data via I²C to the ESP32-S3-WROOM-1-N4 microcontroller. The ESP32 processes the sensor data and transmits it over UART for integration into the system.</p>
 <hr />
 <h2 id="message-structure"><strong>Message Structure</strong></h2>
+<h3 id="general-message-format"><strong>General Message Format</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Byte</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Example Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Byte 1</td>
+<td>Message Type</td>
+<td><code>0x10</code></td>
+</tr>
+<tr>
+<td>Byte 2</td>
+<td>Source ID</td>
+<td><code>0x01</code> (ESP32)</td>
+</tr>
+<tr>
+<td>Byte 3</td>
+<td>Destination ID</td>
+<td><code>0x02</code> (Sensor)</td>
+</tr>
+<tr>
+<td>Byte 4</td>
+<td>Sensor Data (LSB)</td>
+<td><code>0x7A</code></td>
+</tr>
+<tr>
+<td>Byte 5</td>
+<td>Sensor Data (MSB)</td>
+<td><code>0x00</code></td>
+</tr>
+<tr>
+<td>Byte 6</td>
+<td>End Byte</td>
+<td><code>0x42</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h3 id="esp32-requests-sensor-data"><strong>ESP32 Requests Sensor Data</strong></h3>
 <table>
 <thead>
@@ -702,7 +769,7 @@
 <th><strong>Byte</strong></th>
 <th><strong>Variable Name</strong></th>
 <th><strong>Data Type</strong></th>
-<th><strong>Example Value</strong></th>
+<th><strong>Value</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -716,7 +783,7 @@
 <td>Byte 2</td>
 <td>Source ID</td>
 <td><code>uint8_t</code></td>
-<td><code>0x01</code> (ESP32)</td>
+<td><code>0x01</code></td>
 </tr>
 <tr>
 <td>Byte 3</td>
@@ -727,7 +794,7 @@
 </tbody>
 </table>
 <p><strong>Purpose:</strong><br />
-- The ESP32 sends this request to obtain real-time color sensor data from the OPT4060.</p>
+- The ESP32 sends this request to obtain real-time color sensor data over I²C from the OPT4060 sensor.</p>
 <hr />
 <h3 id="sensor-subsystem-sends-data-to-esp32"><strong>Sensor Subsystem Sends Data to ESP32</strong></h3>
 <table>
@@ -779,35 +846,113 @@
 </tbody>
 </table>
 <p><strong>Purpose:</strong><br />
-- The OPT4060 Color Sensor** transmits processed RGBW values to the ESP32.
-- The checksum ensures data integrity.</p>
+- The OPT4060 Color Sensor transmits processed RGBW values to the ESP32.</p>
 <hr />
-<h2 id="sensor-subsystem-communication-flow"><strong>Sensor Subsystem Communication Flow</strong></h2>
+<h3 id="esp32-sends-processed-data-to-motor-oled-and-wifi"><strong>ESP32 Sends Processed Data to Motor, OLED, and WiFi</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Byte</strong></th>
+<th><strong>Variable Name</strong></th>
+<th><strong>Data Type</strong></th>
+<th><strong>Example Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Byte 1</td>
+<td>Message Type</td>
+<td><code>uint8_t</code></td>
+<td><code>0x30</code></td>
+</tr>
+<tr>
+<td>Byte 2</td>
+<td>Source ID</td>
+<td><code>uint8_t</code></td>
+<td><code>0x01</code> (ESP32)</td>
+</tr>
+<tr>
+<td>Byte 3</td>
+<td>Destination ID (Motor Controller)</td>
+<td><code>uint8_t</code></td>
+<td><code>0x03</code></td>
+</tr>
+<tr>
+<td>Byte 4</td>
+<td>Destination ID (OLED Display)</td>
+<td><code>uint8_t</code></td>
+<td><code>0x04</code></td>
+</tr>
+<tr>
+<td>Byte 5</td>
+<td>Destination ID (WiFi Module)</td>
+<td><code>uint8_t</code></td>
+<td><code>0x05</code></td>
+</tr>
+<tr>
+<td>Byte 6</td>
+<td>Sensor Data (LSB)</td>
+<td><code>uint8_t</code></td>
+<td><code>0x7A</code></td>
+</tr>
+<tr>
+<td>Byte 7</td>
+<td>Sensor Data (MSB)</td>
+<td><code>uint8_t</code></td>
+<td><code>0x00</code></td>
+</tr>
+<tr>
+<td>Byte 8</td>
+<td>End Byte</td>
+<td><code>uint8_t</code></td>
+<td><code>0x42</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong><br />
+- The ESP32 simultaneously sends processed sensor data to:
+  - Motor Controller (<code>0x03</code>) → Adjusts speed based on line position.
+  - OLED Display (<code>0x04</code>) → Displays real-time sensor readings.
+  - WiFi Module (<code>0x05</code>) → Transmits sensor logs for remote monitoring.</p>
+<hr />
+<h2 id="sensor-api-communication-flow"><strong>Sensor API Communication Flow</strong></h2>
 <ol>
-<li><strong>ESP32 Requests Data</strong></li>
+<li><strong>ESP32 Requests Data from the Sensor</strong></li>
 <li>
-<p>Sends an I²C request to the OPT4060 sensor.</p>
+<p>Sends an I²C request to the OPT4060.</p>
 </li>
 <li>
-<p><strong>Sensor Responds to ESP32</strong></p>
+<p><strong>OPT4060 Sensor Processes the Request</strong></p>
+</li>
+<li>Reads current color contrast values.</li>
+<li>
+<p>Encodes the RGBW sensor data into the message format.</p>
 </li>
 <li>
-<p>The OPT4060 transmits processed color values.</p>
+<p><strong>OPT4060 Sends Data to ESP32</strong></p>
+</li>
+<li>Responds with processed color values.</li>
+<li>
+<p>Ensures checksum integrity before sending.</p>
 </li>
 <li>
-<p><strong>ESP32 Processes Sensor Data</strong></p>
+<p><strong>ESP32 Receives and Interprets the Data</strong></p>
+</li>
+<li>Extracts color sensor readings.</li>
+<li>Checks message validity** (checksum, size).</li>
+<li>
+<p>Ignores malformed messages or requests retransmission if needed.</p>
 </li>
 <li>
-<p>The ESP32 interprets the sensor values for line contrast detection.</p>
+<p><strong>ESP32 Sends Processed Data via UART</strong></p>
 </li>
-<li>
-<p><strong>ESP32 Forwards Data</strong></p>
-</li>
-<li>The ESP32 sends the processed sensor values to the next stage in the system via UART.</li>
+<li>To Motor Controller (<code>0x03</code>) → Adjusts motor speed if the line position shifts.</li>
+<li>To OLED Display (<code>0x04</code>) → Displays real-time feedback (<code>"Line Centered"</code>, <code>"Drifting Left"</code>).</li>
+<li>To WiFi Module (<code>0x05</code>) → Logs the sensor readings for remote tracking.</li>
 </ol>
 <hr />
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
-<p>This API documentation ensures that the Sensor Subsystem follows the I²C and UART communication protocols and integrates properly with the ESP32. The structured message format** and error handling mechanisms guarantee accurate and reliable data transmission.</p>
+<p>This documentation ensures the sensor subsystem follows I²C and UART daisy chain protocols, enabling seamless communication. The structured message format allows accurate retrieval of color data from the OPT4060, which the ESP32 processes and transmits to the motor controller, OLED display, and WiFi module. Error-handling mechanisms, such as checksum verification and retransmission, ensure reliable data integrity. This API provides a clear and efficient method for integrating the sensor subsystem into the overall system.</p>
 
 
 
