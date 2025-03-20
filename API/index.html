@@ -29,7 +29,7 @@
 
     
       
-        <title>Sensor API Documentation - EGR314 Report Template</title>
+        <title>Sensor Subsystem API Documentation - EGR314 Report Template</title>
       
     
     
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sensor-api-documentation" class="md-skip">
+        <a href="#sensor-subsystem-api-documentation" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sensor API Documentation
+              Sensor Subsystem API Documentation
             
           </span>
         </div>
@@ -226,7 +226,7 @@
   
     
   
-  Sensor API Documentation
+  Sensor Subsystem API Documentation
 
       </a>
     </li>
@@ -402,15 +402,93 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sensor Subsystem API Documentation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Sensor API Documentation
+    Sensor Subsystem API Documentation
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-structure" class="md-nav__link">
+    Message Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esp32-requests-sensor-data" class="md-nav__link">
+    ESP32 Requests Sensor Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-subsystem-sends-data-to-esp32" class="md-nav__link">
+    Sensor Subsystem Sends Data to ESP32
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-subsystem-communication-flow" class="md-nav__link">
+    Sensor Subsystem Communication Flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -531,6 +609,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-structure" class="md-nav__link">
+    Message Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esp32-requests-sensor-data" class="md-nav__link">
+    ESP32 Requests Sensor Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor-subsystem-sends-data-to-esp32" class="md-nav__link">
+    Sensor Subsystem Sends Data to ESP32
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-subsystem-communication-flow" class="md-nav__link">
+    Sensor Subsystem Communication Flow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -552,7 +686,128 @@
   
 
 
-<h1 id="sensor-api-documentation">Sensor API Documentation</h1>
+<h1 id="sensor-subsystem-api-documentation">Sensor Subsystem API Documentation</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The Sensor Subsystem is responsible for detecting line contrast using the OPT4060 RGBW Color Sensor and transmitting this data to the ESP32-S3-WROOM-1-N4 via I²C. The ESP32 processes the sensor data and forwards it over UART for further use in the system.</p>
+<p>This document outlines:
+- The message structure for sending and receiving sensor data.
+- The data format ensuring compliance with the UART daisy chain protocol.
+- The handling of malformed messages and acknowledgment processes.</p>
+<hr />
+<h2 id="message-structure"><strong>Message Structure</strong></h2>
+<h3 id="esp32-requests-sensor-data"><strong>ESP32 Requests Sensor Data</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Byte</strong></th>
+<th><strong>Variable Name</strong></th>
+<th><strong>Data Type</strong></th>
+<th><strong>Example Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Byte 1</td>
+<td>Message Type</td>
+<td><code>uint8_t</code></td>
+<td><code>0x10</code></td>
+</tr>
+<tr>
+<td>Byte 2</td>
+<td>Source ID</td>
+<td><code>uint8_t</code></td>
+<td><code>0x01</code> (ESP32)</td>
+</tr>
+<tr>
+<td>Byte 3</td>
+<td>End Byte</td>
+<td><code>uint8_t</code></td>
+<td><code>0x42</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong><br />
+- The ESP32 sends this request to obtain real-time color sensor data from the OPT4060.</p>
+<hr />
+<h3 id="sensor-subsystem-sends-data-to-esp32"><strong>Sensor Subsystem Sends Data to ESP32</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Byte</strong></th>
+<th><strong>Variable Name</strong></th>
+<th><strong>Data Type</strong></th>
+<th><strong>Example Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Byte 1</td>
+<td>Message Type</td>
+<td><code>uint8_t</code></td>
+<td><code>0x20</code></td>
+</tr>
+<tr>
+<td>Byte 2</td>
+<td>Source ID</td>
+<td><code>uint8_t</code></td>
+<td><code>0x02</code> (Sensor)</td>
+</tr>
+<tr>
+<td>Byte 3</td>
+<td>Color Value (LSB)</td>
+<td><code>uint8_t</code></td>
+<td><code>0x7A</code></td>
+</tr>
+<tr>
+<td>Byte 4</td>
+<td>Color Value (MSB)</td>
+<td><code>uint8_t</code></td>
+<td><code>0x00</code></td>
+</tr>
+<tr>
+<td>Byte 5</td>
+<td>Checksum</td>
+<td><code>uint8_t</code></td>
+<td><code>0xA1</code></td>
+</tr>
+<tr>
+<td>Byte 6</td>
+<td>End Byte</td>
+<td><code>uint8_t</code></td>
+<td><code>0x42</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Purpose:</strong><br />
+- The OPT4060 Color Sensor** transmits processed RGBW values to the ESP32.
+- The checksum ensures data integrity.</p>
+<hr />
+<h2 id="sensor-subsystem-communication-flow"><strong>Sensor Subsystem Communication Flow</strong></h2>
+<ol>
+<li><strong>ESP32 Requests Data</strong></li>
+<li>
+<p>Sends an I²C request to the OPT4060 sensor.</p>
+</li>
+<li>
+<p><strong>Sensor Responds to ESP32</strong></p>
+</li>
+<li>
+<p>The OPT4060 transmits processed color values.</p>
+</li>
+<li>
+<p><strong>ESP32 Processes Sensor Data</strong></p>
+</li>
+<li>
+<p>The ESP32 interprets the sensor values for line contrast detection.</p>
+</li>
+<li>
+<p><strong>ESP32 Forwards Data</strong></p>
+</li>
+<li>The ESP32 sends the processed sensor values to the next stage in the system via UART.</li>
+</ol>
+<hr />
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<p>This API documentation ensures that the Sensor Subsystem follows the I²C and UART communication protocols and integrates properly with the ESP32. The structured message format** and error handling mechanisms guarantee accurate and reliable data transmission.</p>
 
 
 
