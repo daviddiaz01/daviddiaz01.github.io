@@ -27,7 +27,7 @@ The Sensor Subsystem detects line contrast using the OPT4060 RGBW Color Sensor a
 | Byte 3  | End Byte        | `uint8_t`   | `0x42`  |
 
 **Purpose:**  
-- The ESP32 sends this request to obtain real-time color sensor data over I²C from the OPT4060 sensor.
+The ESP32 sends this request to obtain real-time color sensor data over I²C from the OPT4060 sensor.
 
 ---
 
@@ -42,7 +42,7 @@ The Sensor Subsystem detects line contrast using the OPT4060 RGBW Color Sensor a
 | Byte 6  | End Byte        | `uint8_t`   | `0x42` |
 
 **Purpose:**  
-- The OPT4060 Color Sensor transmits processed RGBW values to the ESP32.
+The OPT4060 Color Sensor transmits processed RGBW values to the ESP32.
 
 ---
 
