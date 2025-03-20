@@ -59,10 +59,7 @@ The Sensor Subsystem detects line contrast using the OPT4060 RGBW Color Sensor a
 | Byte 8  | End Byte        | `uint8_t`   | `0x42` |
 
 **Purpose:**  
-- The ESP32 simultaneously sends processed sensor data to:
-  - Motor Controller (`0x03`) → Adjusts speed based on line position.
-  - OLED Display (`0x04`) → Displays real-time sensor readings.
-  - WiFi Module (`0x05`) → Transmits sensor logs for remote monitoring.
+The ESP32 processes the sensor data and distributes it to multiple components for system integration. It sends the processed data to the motor controller to adjust speed based on the detected line position, ensuring precise movement and real-time corrections. The OLED display receives the same data to provide visual feedback, allowing users to monitor sensor readings and system status. Additionally, the WiFi module logs the transmitted data for remote monitoring, enabling real-time tracking and analysis of the sensor's performance.
 
 ---
 
@@ -71,18 +68,22 @@ The Sensor Subsystem detects line contrast using the OPT4060 RGBW Color Sensor a
 1. **ESP32 Requests Data from the Sensor**
    - Sends an I²C request to the OPT4060.
 
+
 2. **OPT4060 Sensor Processes the Request**
    - Reads current color contrast values.
    - Encodes the RGBW sensor data into the message format.
+
 
 3. **OPT4060 Sends Data to ESP32**
    - Responds with processed color values.
    - Ensures checksum integrity before sending.
 
+
 4. **ESP32 Receives and Interprets the Data**
    - Extracts color sensor readings.
    - Checks message validity** (checksum, size).
    - Ignores malformed messages or requests retransmission if needed.
+
 
 5. **ESP32 Sends Processed Data via UART**
    - To Motor Controller (`0x03`) → Adjusts motor speed if the line position shifts.
