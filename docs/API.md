@@ -72,9 +72,9 @@ The ESP32 processes the sensor data and distributes it to multiple components fo
 | **OPT4060 Sends Data to ESP32** | Responds with processed color values and ensures checksum integrity before sending. |
 | **ESP32 Receives and Interprets the Data** | Extracts color sensor readings, checks message validity (checksum, size), and ignores malformed messages or requests retransmission if needed. |
 | **ESP32 Sends Processed Data via UART** | Sends processed data to the following components: |
-| **→ Motor Controller (0x03)** | Adjusts motor speed if the line position shifts. |
-| **→ OLED Display (0x04)** | Displays real-time feedback ("Line Centered", "Drifting Left"). |
-| **→ WiFi Module (0x05)** | Logs the sensor readings for remote tracking. |
+| **Motor Controller (0x03)** | Adjusts motor speed if the line position shifts. |
+| **OLED Display (0x04)** | Displays real-time feedback ("Line Centered", "Drifting Left"). |
+| **WiFi Module (0x05)** | Logs the sensor readings for remote tracking. |
 
 
 ---
