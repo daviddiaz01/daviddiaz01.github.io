@@ -913,40 +913,48 @@
 The ESP32 processes the sensor data and distributes it to multiple components for system integration. It sends the processed data to the motor controller to adjust speed based on the detected line position, ensuring precise movement and real-time corrections. The OLED display receives the same data to provide visual feedback, allowing users to monitor sensor readings and system status. Additionally, the WiFi module logs the transmitted data for remote monitoring, enabling real-time tracking and analysis of the sensor's performance.</p>
 <hr />
 <h2 id="sensor-api-communication-flow"><strong>Sensor API Communication Flow</strong></h2>
-<ol>
-<li><strong>ESP32 Requests Data from the Sensor</strong></li>
-<li>
-<p>Sends an I²C request to the OPT4060.</p>
-</li>
-<li>
-<p><strong>OPT4060 Sensor Processes the Request</strong></p>
-</li>
-<li>Reads current color contrast values.</li>
-<li>
-<p>Encodes the RGBW sensor data into the message format.</p>
-</li>
-<li>
-<p><strong>OPT4060 Sends Data to ESP32</strong></p>
-</li>
-<li>Responds with processed color values.</li>
-<li>
-<p>Ensures checksum integrity before sending.</p>
-</li>
-<li>
-<p><strong>ESP32 Receives and Interprets the Data</strong></p>
-</li>
-<li>Extracts color sensor readings.</li>
-<li>Checks message validity** (checksum, size).</li>
-<li>
-<p>Ignores malformed messages or requests retransmission if needed.</p>
-</li>
-<li>
-<p><strong>ESP32 Sends Processed Data via UART</strong></p>
-</li>
-<li>To Motor Controller (<code>0x03</code>) → Adjusts motor speed if the line position shifts.</li>
-<li>To OLED Display (<code>0x04</code>) → Displays real-time feedback (<code>"Line Centered"</code>, <code>"Drifting Left"</code>).</li>
-<li>To WiFi Module (<code>0x05</code>) → Logs the sensor readings for remote tracking.</li>
-</ol>
+<table>
+<thead>
+<tr>
+<th><strong>Process Stage</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ESP32 Requests Data from the Sensor</strong></td>
+<td>Sends an I²C request to the OPT4060.</td>
+</tr>
+<tr>
+<td><strong>OPT4060 Sensor Processes the Request</strong></td>
+<td>Reads current color contrast values and encodes the RGBW sensor data into the message format.</td>
+</tr>
+<tr>
+<td><strong>OPT4060 Sends Data to ESP32</strong></td>
+<td>Responds with processed color values and ensures checksum integrity before sending.</td>
+</tr>
+<tr>
+<td><strong>ESP32 Receives and Interprets the Data</strong></td>
+<td>Extracts color sensor readings, checks message validity (checksum, size), and ignores malformed messages or requests retransmission if needed.</td>
+</tr>
+<tr>
+<td><strong>ESP32 Sends Processed Data via UART</strong></td>
+<td>Sends processed data to the following components:</td>
+</tr>
+<tr>
+<td><strong>→ Motor Controller (0x03)</strong></td>
+<td>Adjusts motor speed if the line position shifts.</td>
+</tr>
+<tr>
+<td><strong>→ OLED Display (0x04)</strong></td>
+<td>Displays real-time feedback ("Line Centered", "Drifting Left").</td>
+</tr>
+<tr>
+<td><strong>→ WiFi Module (0x05)</strong></td>
+<td>Logs the sensor readings for remote tracking.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="conclusion"><strong>Conclusion</strong></h2>
 <p>This documentation ensures the sensor subsystem follows I²C and UART daisy chain protocols, enabling seamless communication. The structured message format allows accurate retrieval of color data from the OPT4060, which the ESP32 processes and transmits to the motor controller, OLED display, and WiFi module. Error-handling mechanisms, such as checksum verification and retransmission, ensure reliable data integrity. This API provides a clear and efficient method for integrating the sensor subsystem into the overall system.</p>
