@@ -65,31 +65,17 @@ The ESP32 processes the sensor data and distributes it to multiple components fo
 
 ## **Sensor API Communication Flow**
 
-1. **ESP32 Requests Data from the Sensor**
-   - Sends an I²C request to the OPT4060.
+| **Process Stage**                          | **Description** |
+|------------------------------------|----------------|
+| **ESP32 Requests Data from the Sensor** | Sends an I²C request to the OPT4060. |
+| **OPT4060 Sensor Processes the Request** | Reads current color contrast values and encodes the RGBW sensor data into the message format. |
+| **OPT4060 Sends Data to ESP32** | Responds with processed color values and ensures checksum integrity before sending. |
+| **ESP32 Receives and Interprets the Data** | Extracts color sensor readings, checks message validity (checksum, size), and ignores malformed messages or requests retransmission if needed. |
+| **ESP32 Sends Processed Data via UART** | Sends processed data to the following components: |
+| **→ Motor Controller (0x03)** | Adjusts motor speed if the line position shifts. |
+| **→ OLED Display (0x04)** | Displays real-time feedback ("Line Centered", "Drifting Left"). |
+| **→ WiFi Module (0x05)** | Logs the sensor readings for remote tracking. |
 
-
-2. **OPT4060 Sensor Processes the Request**
-   - Reads current color contrast values.
-   - Encodes the RGBW sensor data into the message format.
-
-
-3. **OPT4060 Sends Data to ESP32**
-   - Responds with processed color values.
-   - Ensures checksum integrity before sending.
-
-
-4. **ESP32 Receives and Interprets the Data**
-   - Extracts color sensor readings.
-   - Checks message validity** (checksum, size).
-   - Ignores malformed messages or requests retransmission if needed.
-
-
-5. **ESP32 Sends Processed Data via UART**
-   - To Motor Controller (`0x03`) → Adjusts motor speed if the line position shifts.
-   - To OLED Display (`0x04`) → Displays real-time feedback (`"Line Centered"`, `"Drifting Left"`).
-   - To WiFi Module (`0x05`) → Logs the sensor readings for remote tracking.
- 
 
 ---
 
