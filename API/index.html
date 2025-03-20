@@ -910,10 +910,7 @@
 </tbody>
 </table>
 <p><strong>Purpose:</strong><br />
-- The ESP32 simultaneously sends processed sensor data to:
-  - Motor Controller (<code>0x03</code>) → Adjusts speed based on line position.
-  - OLED Display (<code>0x04</code>) → Displays real-time sensor readings.
-  - WiFi Module (<code>0x05</code>) → Transmits sensor logs for remote monitoring.</p>
+The ESP32 processes the sensor data and distributes it to multiple components for system integration. It sends the processed data to the motor controller to adjust speed based on the detected line position, ensuring precise movement and real-time corrections. The OLED display receives the same data to provide visual feedback, allowing users to monitor sensor readings and system status. Additionally, the WiFi module logs the transmitted data for remote monitoring, enabling real-time tracking and analysis of the sensor's performance.</p>
 <hr />
 <h2 id="sensor-api-communication-flow"><strong>Sensor API Communication Flow</strong></h2>
 <ol>
