@@ -1,56 +1,110 @@
 # Sensor Subsystem API Documentation
 
 ## Introduction
-The sensor subsystem uses the OPT4060 RGBW Color Sensor to detect line contrast and transmit line position data to the ESP32-S3-WROOM-1-N4 via I2C. The ESP32 processes this data and sends the result to the Motor Controller, OLED Display, and WiFi Module using the UART daisy chain protocol.
+
+The Sensor Subsystem uses the OPT4060 RGBW Color Sensor to detect line contrast for a line-following robot. This sensor communicates with the ESP32-S3-WROOM-1-N4 over I2C, and the ESP32 then processes the data and transmits a signed line_position value via UART to other subsystems, including the Motor Controller (0x03), OLED Display (0x04), and WiFi Module (0x05). This document outlines internal communication, message formatting, and protocol compliance.
 
 ---
 
 ## Message Overview
 
-| **Message**       | **Variable Name** | **Variable Type** | **Min** | **Max** | **Example** |
-|-------------------|-------------------|--------------------|--------|--------|-------------|
-| Line Position     | `line_position`   | `int8_t`           | -100   | 100    | 25          |
+| Message       | Variable Name   | Type     | Min   | Max   | Example |
+|---------------|------------------|----------|--------|--------|---------|
+| Line Position | `line_position`  | `int8_t` | -100  | 100   | 25      |
 
 ---
 
-## Line Position - Transmit Format
+## Internal I2C Communication
 
-This message is sent from the ESP32 to each destination subsystem.
+### ESP32 Requests Sensor Data from OPT4060
+
+| Byte | Description         | Type      | Value  |
+|------|----------------------|-----------|--------|
+| 1    | I2C Command          | `uint8_t` | 0x10   |
+| 2    | Source ID (ESP32)    | `uint8_t` | 0x01   |
+| 3    | Destination (Sensor) | `uint8_t` | 0x02   |
+| 4    | End Byte             | `uint8_t` | 0x42   |
+
+---
+
+### OPT4060 Sends RGBW Data to ESP32
+
+| Byte | Description         | Type      | Value  |
+|------|----------------------|-----------|--------|
+| 1    | Message Type         | `uint8_t` | 0x20   |
+| 2    | Source ID (Sensor)   | `uint8_t` | 0x02   |
+| 3    | Color LSB            | `uint8_t` | 0x7A   |
+| 4    | Color MSB            | `uint8_t` | 0x00   |
+| 5    | Checksum             | `uint8_t` | 0xA1   |
+| 6    | End Byte             | `uint8_t` | 0x42   |
+
+---
+
+### ESP32 Extracts Line Position
+
+The ESP32 calculates the line_position value based on the RGBW sensor reading and maps it into an int8_t range (-100 to 100).  
+- Negative values: Drift to the left  
+- Positive values: Drift to the right
+
+---
+
+## UART Message Format – ESP32 Sends Processed Data
 
 ### To Motor Controller (0x03)
-| Byte 1 | Byte 2 | Byte 3 | Byte 4     | Byte 5 |
-|--------|--------|--------|------------|--------|
-| Start  | Sender | Receiver | Line Position | End    |
-| 0x41   | 0x01   | 0x03     | `int8_t`      | 0x42   |
+
+| Byte | Description      | Type      | Example |
+|------|------------------|-----------|---------|
+| 1    | Start Byte       | `uint8_t` | 0x41    |
+| 2    | Sender ID        | `uint8_t` | 0x01    |
+| 3    | Receiver ID      | `uint8_t` | 0x03    |
+| 4    | Line Position    | `int8_t`  | 25      |
+| 5    | End Byte         | `uint8_t` | 0x42    |
 
 ### To OLED Display (0x04)
-| Byte 1 | Byte 2 | Byte 3 | Byte 4     | Byte 5 |
-|--------|--------|--------|------------|--------|
-| Start  | Sender | Receiver | Line Position | End    |
-| 0x41   | 0x01   | 0x04     | `int8_t`      | 0x42   |
+
+| Byte | Description      | Type      | Example |
+|------|------------------|-----------|---------|
+| 1    | Start Byte       | `uint8_t` | 0x41    |
+| 2    | Sender ID        | `uint8_t` | 0x01    |
+| 3    | Receiver ID      | `uint8_t` | 0x04    |
+| 4    | Line Position    | `int8_t`  | 25      |
+| 5    | End Byte         | `uint8_t` | 0x42    |
 
 ### To WiFi Module (0x05)
-| Byte 1 | Byte 2 | Byte 3 | Byte 4     | Byte 5 |
-|--------|--------|--------|------------|--------|
-| Start  | Sender | Receiver | Line Position | End    |
-| 0x41   | 0x01   | 0x05     | `int8_t`      | 0x42   |
+
+| Byte | Description      | Type      | Example |
+|------|------------------|-----------|---------|
+| 1    | Start Byte       | `uint8_t` | 0x41    |
+| 2    | Sender ID        | `uint8_t` | 0x01    |
+| 3    | Receiver ID      | `uint8_t` | 0x05    |
+| 4    | Line Position    | `int8_t`  | 25      |
+| 5    | End Byte         | `uint8_t` | 0x42    |
 
 ---
 
-## Sensor Subsystem Communication Flow
+## Communication Flow
 
-| **Process Stage**                       | **Description** |
-|----------------------------------------|----------------|
-| ESP32 requests data from OPT4060       | Sends an I²C request to the color sensor. |
-| OPT4060 responds                        | Reads RGBW values and sends processed data. |
-| ESP32 extracts line position           | Processes RGBW values and calculates the signed line position. |
-| ESP32 sends processed data             | Sends line position via UART to: |
-| Motor Controller (0x03)              | Adjusts motor speed if the line position shifts. |
-| OLED Display (0x04)                  | Displays real-time feedback ("Line Centered", "Drifting Left"). |
-| WiFi Module (0x05)                   | Logs the sensor readings for remote tracking. |
+| Stage                          | Description                                           |
+|--------------------------------|-------------------------------------------------------|
+| ESP32 initiates I2C request    | Sends request to OPT4060 for RGBW data               |
+| OPT4060 responds               | Sends RGBW data back to ESP32                         |
+| ESP32 calculates line position| Converts RGBW data to a signed line_position value  |
+| ESP32 sends UART messages      | Sends processed data to:                              |
+|                                | → Motor Controller (0x03)                           |
+|                                | → OLED Display (0x04)                               |
+|                                | → WiFi Module (0x05)                                |
+
+---
+
+## Data Type 
+
+- line position uses int8_t to represent both left and right drift (negative and positive).
+- Message framing (start, end, sender, receiver) uses uint8_t for byte consistency.
+- Sensor RGBW data is transmitted as raw uint8_t or uint16_t values.
 
 ---
 
 
 ## Conclusion
-This API ensures the sensor subsystem communicates accurately using the OPT4060 color sensor via I²C and distributes the signed line position data via UART to the rest of the system. The message structures and formatting match team-wide expectations, allowing the WiFi, HMI, and motor subsystems to receive, log, or act on real-time sensor data reliably.
+
+The API defines how the Sensor Subsystem communicates with other modules using I2C and UART. It supports signed line_position values, subsystem-specific addressing, and robust message formatting
