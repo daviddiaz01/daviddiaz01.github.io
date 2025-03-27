@@ -104,7 +104,9 @@ The ESP32 calculates the line_position value based on the RGBW sensor reading an
 
 ---
 ## **Code Zip File**
-[Download Zip File](images/docs/images/API-SENSOR-DD.zip)
+[Download Zip File](images/API_SENSOR_DD.zip)
+
+
 
 
 ## Conclusion
