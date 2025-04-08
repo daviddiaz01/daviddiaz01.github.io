@@ -5,7 +5,7 @@
 
 
 ## **PDF Link**  
-[View Schematic (PDF)](images/SensorSubDD.pdf)
+[View Schematic (PDF)](images/SCEMATIC_FINAL_PCB.pdf)
 
 ## **Zip File**
 [Download Zip File](images/EGR314_SENSORSUBSYSTEM_DIAZ.zip)
