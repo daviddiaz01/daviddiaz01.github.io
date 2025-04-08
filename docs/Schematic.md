@@ -8,4 +8,4 @@
 [View Schematic (PDF)](images/SCEMATIC_FINAL_PCB.pdf)
 
 ## **Zip File**
-[Download Zip File](images/EGR314_SENSORSUBSYSTEM_DIAZ.zip)
+[Download Zip File](images/SensorSubsystemDD.zip)
