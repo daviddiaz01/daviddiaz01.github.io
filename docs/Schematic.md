@@ -7,5 +7,5 @@
 ## **PDF Link**  
 [View Schematic (PDF)](images/SCEMATIC_FINAL_PCB.pdf)
 
-## **Zip File**
+## **PCB Project Zip File**
 [Download Zip File](images/SensorSubsystemDD.zip)
