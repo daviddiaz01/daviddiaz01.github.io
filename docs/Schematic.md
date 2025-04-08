@@ -1,7 +1,7 @@
 # Individual Sensor Subsystem Schematic 
 
 ## Schematic Diagram
-![Schematic](images/SensorSubDD.jpg)
+![Schematic](images/SCEMATIC_FINAL_PCB.pdf)
 
 
 ## **PDF Link**  
