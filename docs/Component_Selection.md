@@ -1,4 +1,4 @@
-# Component Selection for Sensor Subsystem  
+# Component Selection   
 ### David Diaz  
 ### EGR 314 - Sensor Subsystem  
 
