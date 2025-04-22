@@ -1,4 +1,4 @@
-# Individual Sensor Subsystem Schematic 
+# Subsystem Schematic 
 
 ## Schematic Diagram
 ![Schematic](images/SCEMATIC_FINAL_PCB.jpg)
