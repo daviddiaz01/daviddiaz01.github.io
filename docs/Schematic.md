@@ -1,4 +1,4 @@
-# Subsystem Schematic 
+# Schematic 
 
 ## Schematic Diagram
 ![Schematic](images/SCEMATIC_FINAL_PCB.jpg)
