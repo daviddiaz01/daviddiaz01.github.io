@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/</loc>
-         <lastmod>2025-04-22</lastmod>
+         <lastmod>2025-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/API/</loc>
-         <lastmod>2025-04-22</lastmod>
+         <lastmod>2025-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/BOM/</loc>
-         <lastmod>2025-04-22</lastmod>
+         <lastmod>2025-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Block_Diagram/</loc>
-         <lastmod>2025-04-22</lastmod>
+         <lastmod>2025-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Component_Selection/</loc>
-         <lastmod>2025-04-22</lastmod>
+         <lastmod>2025-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Power_Budget/</loc>
-         <lastmod>2025-04-22</lastmod>
+         <lastmod>2025-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Schematic/</loc>
-         <lastmod>2025-04-22</lastmod>
+         <lastmod>2025-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/static/node_modules/mathjax/</loc>
-         <lastmod>2025-04-22</lastmod>
+         <lastmod>2025-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

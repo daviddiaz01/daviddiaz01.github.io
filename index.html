@@ -418,43 +418,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#david-diaz-egr-314" class="md-nav__link">
-    David Diaz – EGR 314
-  </a>
-  
-    <nav class="md-nav" aria-label="David Diaz – EGR 314">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#about-the-project" class="md-nav__link">
     About the Project
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#key-objectives" class="md-nav__link">
     Key Objectives
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#project-subsystems" class="md-nav__link">
     Project Subsystems
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#development-process" class="md-nav__link">
     Development Process
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#final-subsystem-hardware" class="md-nav__link">
+    Final Subsystem Hardware
+  </a>
   
 </li>
       
@@ -607,43 +601,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#david-diaz-egr-314" class="md-nav__link">
-    David Diaz – EGR 314
-  </a>
-  
-    <nav class="md-nav" aria-label="David Diaz – EGR 314">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#about-the-project" class="md-nav__link">
     About the Project
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#key-objectives" class="md-nav__link">
     Key Objectives
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#project-subsystems" class="md-nav__link">
     Project Subsystems
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#development-process" class="md-nav__link">
     Development Process
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#final-subsystem-hardware" class="md-nav__link">
+    Final Subsystem Hardware
+  </a>
   
 </li>
       
@@ -671,17 +659,18 @@
 
 
 <h1 id="welcome-to-my-page">Welcome to My Page</h1>
-<h2 id="david-diaz-egr-314">David Diaz – EGR 314</h2>
-<h3 id="about-the-project">About the Project</h3>
-<p>This project focuses on developing a line-following robot, an autonomous system that uses sensors to detect and follow a path. The robot integrates multiple subsystems, each responsible for specific functions such as sensor detection, motor control, power regulation, and communication.  </p>
-<p>As part of this team project, I am responsible for the Sensor Subsystem, which plays a crucial role in detecting the path and guiding the robot’s movement. The ESP32-S3 microcontroller processes sensor data, while the color sensor detects line contrast to enable precise navigation.  </p>
-<h3 id="key-objectives">Key Objectives</h3>
+<p>David Diaz – EGR 314</p>
+<h2 id="about-the-project">About the Project</h2>
+<p>This project centers on the development of an autonomous line-following robot that uses sensor feedback to detect and follow a designated path. The robot integrates multiple subsystems working together to handle sensing, motor control, power regulation, and communication.</p>
+<p>As part of this team project, I am responsible for designing and implementing the Sensor Subsystem, which plays a critical role in detecting the line and guiding the robot's movement. This subsystem uses a color sensor to detect contrast on the ground and sends real-time data to the ESP32-S3 microcontroller, which processes the information and communicates with the motor controller.</p>
+<p>This site documents my individual contributions to the team project and includes my final block diagram, component selection, schematic, PCB design, communication API, and code resources.</p>
+<h2 id="key-objectives">Key Objectives</h2>
 <ul>
-<li><strong>Autonomous Navigation</strong> – Enable the robot to follow a designated path using real-time sensor input.  </li>
-<li><strong>Efficient Data Processing</strong> – Use the ESP32-S3 to analyze sensor readings and send commands.  </li>
-<li><strong>Stable Power Management</strong> – Ensure reliable voltage conversion and power supply for all components.  </li>
+<li>Autonomous navigation – enable real-time path-following based on sensor input  </li>
+<li>Accurate sensor processing – utilize the ESP32-S3 to reliably read and process contrast data  </li>
+<li>Stable power management – ensure proper voltage regulation for the sensor and microcontroller  </li>
 </ul>
-<h3 id="project-subsystems">Project Subsystems</h3>
+<h2 id="project-subsystems">Project Subsystems</h2>
 <table>
 <thead>
 <tr>
@@ -691,31 +680,34 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Sensor Subsystem</strong></td>
+<td>Sensor Subsystem</td>
 <td>Detects line contrast and sends data to MCU</td>
 </tr>
 <tr>
-<td><strong>Motor Control</strong></td>
-<td>Controls wheel movement based on sensor input</td>
+<td>Motor Control</td>
+<td>Drives wheels based on processed sensor input</td>
 </tr>
 <tr>
-<td><strong>Power Management</strong></td>
-<td>Regulates voltage for stable operation</td>
+<td>Power Management</td>
+<td>Regulates voltages for all hardware components</td>
 </tr>
 <tr>
-<td><strong>Communication</strong></td>
-<td>Interfaces with external controllers for debugging</td>
+<td>Communication</td>
+<td>Allows serial/Bluetooth interaction for debugging</td>
 </tr>
 </tbody>
 </table>
-<h3 id="development-process">Development Process</h3>
-<ol>
-<li><strong>Component Selection</strong> – Research and select the best components for performance and efficiency.  </li>
-<li><strong>Circuit Design &amp; PCB Layout</strong> – Design and integrate components into a functional circuit.  </li>
-<li><strong>Firmware Development</strong> – Implement software for sensor communication and data processing.  </li>
-<li><strong>Testing &amp; Optimization</strong> – Ensure the system operates accurately under different conditions.  </li>
-</ol>
-<hr />
+<h2 id="development-process">Development Process</h2>
+<ul>
+<li>Component selection – chose components based on accuracy, speed, and compatibility  </li>
+<li>Circuit design &amp; PCB layout – integrated all parts into a compact and functional PCB design  </li>
+<li>Firmware development – programmed the ESP32-S3 to handle sensor communication over I²C and send UART messages  </li>
+<li>Testing &amp; optimization – validated sensor performance in various lighting and surface conditions</li>
+</ul>
+<h2 id="final-subsystem-hardware">Final Subsystem Hardware</h2>
+<p>Below is the fabricated PCB for the Sensor Subsystem. It includes the ESP32-S3 microcontroller, voltage regulation circuitry, and I²C communication lines connected to the color sensor. This board was designed and assembled as part of my individual contribution to the project.</p>
+<p>The subsystem was fully tested and confirmed to function as intended, successfully detecting line color contrast and transmitting data to the main controller in real time.</p>
+<p><a class="glightbox" href="images/pcb_photo.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="pcb_photo.jpg" src="images/pcb_photo.jpg" /></a> <!-- Replace with your actual image path --></p>
 
 
 
