@@ -28,3 +28,11 @@
 
 ## **Total BOM Cost:**  
  **$53.95**   
+
+## Final Bill of Materials (BOM)
+
+The table below lists the final major components used in my Sensor Subsystem. Passive components such as resistors, capacitors, pushbuttons, and headers are excluded as instructed. This BOM reflects the exact components used on the final fabricated PCB.
+
+Each component was selected based on functionality, electrical compatibility, and integration with the ESP32-S3 microcontroller. The OPT4060 was chosen for its RGBW sensing accuracy and I²C support, while the ESP32-S3-WROOM-1-N4 was selected for its processing capabilities and UART communication features. Voltage regulators were chosen to ensure stable power for the microcontroller and sensor.
+
+All components listed below were successfully tested and functioned as intended in the final system.
