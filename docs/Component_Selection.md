@@ -153,7 +153,24 @@ Each of the above components was selected based on key factors such as electrica
 | Motor PWM                           | 2            | 1          | * |
 | USB Programmer                      | 1            | 1          | USB_D+, USB_D- |
 
+### Final Pinout Table (ESP32-S3)
+
+| ESP32 Pin | Function        | Connected To           |
+|-----------|------------------|------------------------|
+| IO18      | I²C SCL          | OPT4060                |
+| IO19      | I²C SDA          | OPT4060                |
+| IO10      | INT Input        | OPT4060 Interrupt Pin  |
+| IO15      | Debug LED Output | On-board LED           |
+| IO47      | UART TX          | To other subsystems    |
+| IO46      | UART RX          | From external sources  |
+
 ---
+
+### Design Rationale
+
+Each component was selected to ensure seamless operation and compatibility within the Sensor Subsystem. The ESP32-S3 was chosen for its built-in communication protocols (I²C and UART), which reduced the need for external logic. The OPT4060 was selected for its RGBW color detection capabilities and I²C simplicity. Both voltage regulators were added to ensure reliable power delivery from a 12V supply to the 5V and 3.3V rails needed by the ESP32 and sensor.
+
+This selection meets all subsystem requirements by supporting reliable data collection, processing, and communication while maintaining a compact and power-efficient design. All components were tested on the final PCB and confirmed to work as intended.
 
 ## ESP32-S3-WROOM-1-N4 Pinout Diagram  
 
