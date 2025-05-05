@@ -454,10 +454,10 @@
       
         <li class="md-nav__item">
   <a href="#internal-i2c-communication" class="md-nav__link">
-    Internal I2C Communication
+    Internal I²C Communication
   </a>
   
-    <nav class="md-nav" aria-label="Internal I2C Communication">
+    <nav class="md-nav" aria-label="Internal I²C Communication">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -474,15 +474,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#esp32-extracts-line-position" class="md-nav__link">
-    ESP32 Extracts Line Position
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32-internal-processing" class="md-nav__link">
+    ESP32 Internal Processing
+  </a>
   
 </li>
       
@@ -528,8 +528,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-type" class="md-nav__link">
-    Data Type
+  <a href="#data-type-summary" class="md-nav__link">
+    Data Type Summary
   </a>
   
 </li>
@@ -693,10 +693,10 @@
       
         <li class="md-nav__item">
   <a href="#internal-i2c-communication" class="md-nav__link">
-    Internal I2C Communication
+    Internal I²C Communication
   </a>
   
-    <nav class="md-nav" aria-label="Internal I2C Communication">
+    <nav class="md-nav" aria-label="Internal I²C Communication">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -713,15 +713,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#esp32-extracts-line-position" class="md-nav__link">
-    ESP32 Extracts Line Position
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32-internal-processing" class="md-nav__link">
+    ESP32 Internal Processing
+  </a>
   
 </li>
       
@@ -767,8 +767,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-type" class="md-nav__link">
-    Data Type
+  <a href="#data-type-summary" class="md-nav__link">
+    Data Type Summary
   </a>
   
 </li>
@@ -812,7 +812,14 @@
 
 <h1 id="api">API</h1>
 <h2 id="introduction">Introduction</h2>
-<p>The Sensor Subsystem uses the OPT4060 RGBW Color Sensor to detect line contrast for a line-following robot. This sensor communicates with the ESP32-S3-WROOM-1-N4 over I2C, and the ESP32 then processes the data and transmits a signed line_position value via UART to other subsystems, including the Motor Controller (0x03), OLED Display (0x04), and WiFi Module (0x05). This document outlines internal communication, message formatting, and protocol compliance.</p>
+<p>The Sensor Subsystem uses the OPT4060 RGBW Color Sensor to detect line contrast for a line-following robot. This sensor communicates with the ESP32-S3-WROOM-1-N4 over I²C. The ESP32 processes the RGBW data and calculates a signed <code>line_position</code> value, which it transmits via UART to other subsystems, including:</p>
+<ul>
+<li>Motor Controller (0x03)  </li>
+<li>OLED Display (0x04)  </li>
+<li>WiFi Module (0x05)  </li>
+</ul>
+<p>This API outlines the internal I²C communication protocol, UART message structure, and protocol compliance.</p>
+<p>This subsystem was fully tested and confirmed to work exactly as intended. All messages are reliably transmitted and received, and the calculated <code>line_position</code> values enable accurate path tracking during operation.</p>
 <hr />
 <h2 id="message-overview">Message Overview</h2>
 <table>
@@ -829,8 +836,8 @@
 <tbody>
 <tr>
 <td>Line Position</td>
-<td><code>line_position</code></td>
-<td><code>int8_t</code></td>
+<td>line_position</td>
+<td>int8_t</td>
 <td>-100</td>
 <td>100</td>
 <td>25</td>
@@ -838,7 +845,7 @@
 </tbody>
 </table>
 <hr />
-<h2 id="internal-i2c-communication">Internal I2C Communication</h2>
+<h2 id="internal-i2c-communication">Internal I²C Communication</h2>
 <h3 id="esp32-requests-sensor-data-from-opt4060">ESP32 Requests Sensor Data from OPT4060</h3>
 <table>
 <thead>
@@ -852,31 +859,30 @@
 <tbody>
 <tr>
 <td>1</td>
-<td>I2C Command</td>
-<td><code>uint8_t</code></td>
+<td>I²C Command</td>
+<td>uint8_t</td>
 <td>0x10</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Source ID (ESP32)</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x01</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Destination (Sensor)</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x02</td>
 </tr>
 <tr>
 <td>4</td>
 <td>End Byte</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x42</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="opt4060-sends-rgbw-data-to-esp32">OPT4060 Sends RGBW Data to ESP32</h3>
 <table>
 <thead>
@@ -891,46 +897,49 @@
 <tr>
 <td>1</td>
 <td>Message Type</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x20</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Source ID (Sensor)</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x02</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Color LSB</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x7A</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Color MSB</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x00</td>
 </tr>
 <tr>
 <td>5</td>
 <td>Checksum</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0xA1</td>
 </tr>
 <tr>
 <td>6</td>
 <td>End Byte</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x42</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h3 id="esp32-extracts-line-position">ESP32 Extracts Line Position</h3>
-<p>The ESP32 calculates the line_position value based on the RGBW sensor reading and maps it into an int8_t range (-100 to 100).<br />
-- Negative values: Drift to the left<br />
-- Positive values: Drift to the right</p>
+<h2 id="esp32-internal-processing">ESP32 Internal Processing</h2>
+<p>The ESP32 extracts and processes the RGBW data, mapping it to an <code>int8_t</code> <code>line_position</code> value between -100 and 100.</p>
+<ul>
+<li>Negative values: Indicates drift to the left  </li>
+<li>Positive values: Indicates drift to the right  </li>
+</ul>
+<p>This processed value is forwarded to the appropriate subsystems.</p>
 <hr />
 <h2 id="uart-message-format-esp32-sends-processed-data">UART Message Format – ESP32 Sends Processed Data</h2>
 <h3 id="to-motor-controller-0x03">To Motor Controller (0x03)</h3>
@@ -947,31 +956,31 @@
 <tr>
 <td>1</td>
 <td>Start Byte</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x41</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Sender ID</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x01</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Receiver ID</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x03</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Line Position</td>
-<td><code>int8_t</code></td>
+<td>int8_t</td>
 <td>25</td>
 </tr>
 <tr>
 <td>5</td>
 <td>End Byte</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x42</td>
 </tr>
 </tbody>
@@ -990,31 +999,31 @@
 <tr>
 <td>1</td>
 <td>Start Byte</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x41</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Sender ID</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x01</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Receiver ID</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x04</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Line Position</td>
-<td><code>int8_t</code></td>
+<td>int8_t</td>
 <td>25</td>
 </tr>
 <tr>
 <td>5</td>
 <td>End Byte</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x42</td>
 </tr>
 </tbody>
@@ -1033,31 +1042,31 @@
 <tr>
 <td>1</td>
 <td>Start Byte</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x41</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Sender ID</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x01</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Receiver ID</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x05</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Line Position</td>
-<td><code>int8_t</code></td>
+<td>int8_t</td>
 <td>25</td>
 </tr>
 <tr>
 <td>5</td>
 <td>End Byte</td>
-<td><code>uint8_t</code></td>
+<td>uint8_t</td>
 <td>0x42</td>
 </tr>
 </tbody>
@@ -1073,47 +1082,36 @@
 </thead>
 <tbody>
 <tr>
-<td>ESP32 initiates I2C request</td>
-<td>Sends request to OPT4060 for RGBW data</td>
+<td>ESP32 initiates I²C request</td>
+<td>Sends command to OPT4060 for RGBW data</td>
 </tr>
 <tr>
 <td>OPT4060 responds</td>
-<td>Sends RGBW data back to ESP32</td>
+<td>Returns RGBW data over I²C</td>
 </tr>
 <tr>
 <td>ESP32 calculates line position</td>
-<td>Converts RGBW data to a signed line_position value</td>
+<td>Converts RGBW into a signed value (±100)</td>
 </tr>
 <tr>
 <td>ESP32 sends UART messages</td>
-<td>Sends processed data to:</td>
-</tr>
-<tr>
-<td></td>
-<td>→ Motor Controller (0x03)</td>
-</tr>
-<tr>
-<td></td>
-<td>→ OLED Display (0x04)</td>
-</tr>
-<tr>
-<td></td>
-<td>→ WiFi Module (0x05)</td>
+<td>Sends result to Motor, Display, and WiFi subsystems</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="data-type">Data Type</h2>
+<h2 id="data-type-summary">Data Type Summary</h2>
 <ul>
-<li>line position uses int8_t to represent both left and right drift (negative and positive).</li>
-<li>Message framing (start, end, sender, receiver) uses uint8_t for byte consistency.</li>
-<li>Sensor RGBW data is transmitted as raw uint8_t or uint16_t values.</li>
+<li><code>line_position</code> is a signed 8-bit integer (<code>int8_t</code>)  </li>
+<li>Message framing bytes (<code>start</code>, <code>end</code>, <code>sender</code>, <code>receiver</code>) use <code>uint8_t</code>  </li>
+<li>RGBW sensor data is transferred as raw <code>uint8_t</code> or <code>uint16_t</code> values  </li>
 </ul>
 <hr />
 <h2 id="code-zip-file">Code Zip File</h2>
 <p><a href="../images/API-SENSOR-DD-main.zip">Download Zip File</a></p>
 <h2 id="conclusion">Conclusion</h2>
-<p>The API defines how the Sensor Subsystem communicates with other modules using I2C and UART. It supports signed line_position values, subsystem-specific addressing, and robust message formatting</p>
+<p>This API defines how the Sensor Subsystem communicates with other modules using both I²C and UART. It ensures reliable signed <code>line_position</code> transmission, correct subsystem addressing, and compliance with the course messaging protocol.  </p>
+<p>All communications and functionality were tested thoroughly. The subsystem performs consistently and as intended, with all messages reaching their destinations accurately and on time.</p>
 
 
 
