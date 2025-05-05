@@ -604,6 +604,26 @@
     Peripheral Availability
   </a>
   
+    <nav class="md-nav" aria-label="Peripheral Availability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-pinout-table-esp32-s3" class="md-nav__link">
+    Final Pinout Table (ESP32-S3)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-rationale" class="md-nav__link">
+    Design Rationale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -800,6 +820,26 @@
   <a href="#peripheral-availability" class="md-nav__link">
     Peripheral Availability
   </a>
+  
+    <nav class="md-nav" aria-label="Peripheral Availability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-pinout-table-esp32-s3" class="md-nav__link">
+    Final Pinout Table (ESP32-S3)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-rationale" class="md-nav__link">
+    Design Rationale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1196,7 +1236,52 @@
 </tr>
 </tbody>
 </table>
+<h3 id="final-pinout-table-esp32-s3">Final Pinout Table (ESP32-S3)</h3>
+<table>
+<thead>
+<tr>
+<th>ESP32 Pin</th>
+<th>Function</th>
+<th>Connected To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IO18</td>
+<td>I²C SCL</td>
+<td>OPT4060</td>
+</tr>
+<tr>
+<td>IO19</td>
+<td>I²C SDA</td>
+<td>OPT4060</td>
+</tr>
+<tr>
+<td>IO10</td>
+<td>INT Input</td>
+<td>OPT4060 Interrupt Pin</td>
+</tr>
+<tr>
+<td>IO15</td>
+<td>Debug LED Output</td>
+<td>On-board LED</td>
+</tr>
+<tr>
+<td>IO47</td>
+<td>UART TX</td>
+<td>To other subsystems</td>
+</tr>
+<tr>
+<td>IO46</td>
+<td>UART RX</td>
+<td>From external sources</td>
+</tr>
+</tbody>
+</table>
 <hr />
+<h3 id="design-rationale">Design Rationale</h3>
+<p>Each component was selected to ensure seamless operation and compatibility within the Sensor Subsystem. The ESP32-S3 was chosen for its built-in communication protocols (I²C and UART), which reduced the need for external logic. The OPT4060 was selected for its RGBW color detection capabilities and I²C simplicity. Both voltage regulators were added to ensure reliable power delivery from a 12V supply to the 5V and 3.3V rails needed by the ESP32 and sensor.</p>
+<p>This selection meets all subsystem requirements by supporting reliable data collection, processing, and communication while maintaining a compact and power-efficient design. All components were tested on the final PCB and confirmed to work as intended.</p>
 <h2 id="esp32-s3-wroom-1-n4-pinout-diagram">ESP32-S3-WROOM-1-N4 Pinout Diagram</h2>
 <p><a class="glightbox" href="../images/pinout.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pinout Diagram" src="../images/pinout.png" /></a>  </p>
 <hr />
