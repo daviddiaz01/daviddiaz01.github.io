@@ -32,4 +32,4 @@ Below is the fabricated PCB for the Sensor Subsystem. It includes the ESP32-S3 m
 
 The subsystem was fully tested and confirmed to function as intended, successfully detecting line color contrast and transmitting data to the main controller in real time.
 
-![pcb_photo.jpg](images/pcb_photo.jpg) <!-- Replace with your actual image path -->
+![pcb_photo.jpg](images/FinalPCBDD.jpg) 
