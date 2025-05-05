@@ -27,9 +27,3 @@ This site documents my individual contributions to the team project and includes
 - Firmware development – programmed the ESP32-S3 to handle sensor communication over I²C and send UART messages  
 - Testing & optimization – validated sensor performance in various lighting and surface conditions
 
-## Final Subsystem Hardware  
-Below is the fabricated PCB for the Sensor Subsystem. It includes the ESP32-S3 microcontroller, voltage regulation circuitry, and I²C communication lines connected to the color sensor. This board was designed and assembled as part of my individual contribution to the project.
-
-The subsystem was fully tested and confirmed to function as intended, successfully detecting line color contrast and transmitting data to the main controller in real time.
-
-![pcb_photo.jpg](images/FinalPCBDD.jpg) 
