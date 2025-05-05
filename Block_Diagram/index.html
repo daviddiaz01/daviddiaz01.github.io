@@ -477,6 +477,26 @@
     Block Diagram
   </a>
   
+    <nav class="md-nav" aria-label="Block Diagram">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-explanation" class="md-nav__link">
+    Design Explanation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements-alignment" class="md-nav__link">
+    Requirements Alignment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -573,6 +593,26 @@
     Block Diagram
   </a>
   
+    <nav class="md-nav" aria-label="Block Diagram">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-explanation" class="md-nav__link">
+    Design Explanation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements-alignment" class="md-nav__link">
+    Requirements Alignment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -602,6 +642,11 @@
 
 <h2 id="block-diagram">Block Diagram</h2>
 <p><a class="glightbox" href="../images/blocknew.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Block Diagram" src="../images/blocknew.png" /></a></p>
+<h3 id="design-explanation">Design Explanation</h3>
+<p>The block diagram was designed to clearly represent the signal and power flow within the Sensor Subsystem. The ESP32-S3 is placed at the center as the core processor, with the OPT4060 sensor connected to its I²C interface using IO18 (SCL) and IO19 (SDA). This placement reflects the logical data flow from sensor input to microcontroller processing. Voltage regulators are shown supplying stable 5V and 3.3V to their respective components to highlight the power architecture.</p>
+<p>The layout was intentionally kept clean and modular to match the physical design on the PCB and make it easier to troubleshoot, test, and expand. By aligning the diagram with actual pin connections and subsystem boundaries, it provided a reliable blueprint for schematic and firmware development.</p>
+<h3 id="requirements-alignment">Requirements Alignment</h3>
+<p>This block diagram meets the project’s functional and performance requirements by ensuring all essential communication and power lines are accounted for and logically organized. It visually confirms how sensor data is gathered, processed, and transmitted in real-time, supporting the robot's line-following capabilities. The I²C and UART pathways are explicitly shown, reinforcing protocol compliance and inter-subsystem integration. This structure enabled smooth implementation of firmware and accurate wiring in the final hardware.</p>
 
 
 
