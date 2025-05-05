@@ -1,32 +1,35 @@
-
 # Welcome to My Page  
+David Diaz – EGR 314
 
-## David Diaz – EGR 314  
+## About the Project  
+This project centers on the development of an autonomous line-following robot that uses sensor feedback to detect and follow a designated path. The robot integrates multiple subsystems working together to handle sensing, motor control, power regulation, and communication.
 
-### About the Project  
-This project focuses on developing a line-following robot, an autonomous system that uses sensors to detect and follow a path. The robot integrates multiple subsystems, each responsible for specific functions such as sensor detection, motor control, power regulation, and communication.  
+As part of this team project, I am responsible for designing and implementing the Sensor Subsystem, which plays a critical role in detecting the line and guiding the robot's movement. This subsystem uses a color sensor to detect contrast on the ground and sends real-time data to the ESP32-S3 microcontroller, which processes the information and communicates with the motor controller.
 
-As part of this team project, I am responsible for the Sensor Subsystem, which plays a crucial role in detecting the path and guiding the robot’s movement. The ESP32-S3 microcontroller processes sensor data, while the color sensor detects line contrast to enable precise navigation.  
+This site documents my individual contributions to the team project and includes my final block diagram, component selection, schematic, PCB design, communication API, and code resources.
 
-### Key Objectives  
-- **Autonomous Navigation** – Enable the robot to follow a designated path using real-time sensor input.  
-- **Efficient Data Processing** – Use the ESP32-S3 to analyze sensor readings and send commands.  
-- **Stable Power Management** – Ensure reliable voltage conversion and power supply for all components.  
+## Key Objectives  
+- Autonomous navigation – enable real-time path-following based on sensor input  
+- Accurate sensor processing – utilize the ESP32-S3 to reliably read and process contrast data  
+- Stable power management – ensure proper voltage regulation for the sensor and microcontroller  
 
-### Project Subsystems  
-| Subsystem         | Function  |  
-|------------------|--------------------------------------|  
-| **Sensor Subsystem**  | Detects line contrast and sends data to MCU |  
-| **Motor Control** | Controls wheel movement based on sensor input |  
-| **Power Management** | Regulates voltage for stable operation |  
-| **Communication** | Interfaces with external controllers for debugging |  
+## Project Subsystems  
+| Subsystem           | Function                                             |
+|---------------------|------------------------------------------------------|
+| Sensor Subsystem    | Detects line contrast and sends data to MCU         |
+| Motor Control       | Drives wheels based on processed sensor input       |
+| Power Management    | Regulates voltages for all hardware components      |
+| Communication       | Allows serial/Bluetooth interaction for debugging   |
 
-### Development Process  
-1. **Component Selection** – Research and select the best components for performance and efficiency.  
-2. **Circuit Design & PCB Layout** – Design and integrate components into a functional circuit.  
-3. **Firmware Development** – Implement software for sensor communication and data processing.  
-4. **Testing & Optimization** – Ensure the system operates accurately under different conditions.  
+## Development Process  
+- Component selection – chose components based on accuracy, speed, and compatibility  
+- Circuit design & PCB layout – integrated all parts into a compact and functional PCB design  
+- Firmware development – programmed the ESP32-S3 to handle sensor communication over I²C and send UART messages  
+- Testing & optimization – validated sensor performance in various lighting and surface conditions
 
----
+## Final Subsystem Hardware  
+Below is the fabricated PCB for the Sensor Subsystem. It includes the ESP32-S3 microcontroller, voltage regulation circuitry, and I²C communication lines connected to the color sensor. This board was designed and assembled as part of my individual contribution to the project.
 
+The subsystem was fully tested and confirmed to function as intended, successfully detecting line color contrast and transmitting data to the main controller in real time.
 
+![pcb_photo.jpg](images/pcb_photo.jpg) <!-- Replace with your actual image path -->
